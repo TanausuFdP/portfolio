@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import "@/i18n";
-import { Switch } from "@heroui/switch";
+import { Switch } from "@heroui/react";
 
 export default function Home() {
   const { t } = useTranslation();
