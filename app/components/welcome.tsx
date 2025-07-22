@@ -7,7 +7,7 @@ export default function Welcome() {
     <div className="max-w-[56rem] mx-auto">
       <div className="font-semibold text-[2.5rem]">
         <div className="flex flex-wrap items-center gap-2 max-w-[42rem]">
-          <span className="opacity-30">¡Hola!, soy</span>
+          <span className="opacity-30">¡Hola! Soy</span>
           <div className="shadow-[rgba(0,_0,_0,_0.2)_0px_0px_50px] rounded-[20px] overflow-visible">
             <Squircle
               className="border-[0.25rem] border-white"
