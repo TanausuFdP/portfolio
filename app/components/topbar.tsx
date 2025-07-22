@@ -1,18 +1,13 @@
 "use client";
 
-import {
-  Navbar as Topbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-} from "@heroui/navbar";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@heroui/navbar";
 import { Squircle } from "@squircle-js/react";
 import { Button, Image, Link } from "@heroui/react";
 import { DocumentArrowDownIcon } from "@heroicons/react/24/outline";
 
-export default function Navbar() {
+export default function Topbar() {
   return (
-    <Topbar>
+    <Navbar>
       <NavbarBrand>
         <div className="shadow-[rgba(0,_0,_0,_0.2)_0px_0px_50px] rounded-[15px] overflow-visible">
           <Squircle
@@ -50,6 +45,11 @@ export default function Navbar() {
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="#">
+            Trayectoria
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
             Herramientas
           </Link>
         </NavbarItem>
@@ -64,12 +64,14 @@ export default function Navbar() {
           <Button
             className="bg-orange-500 text-white"
             radius="full"
-            startContent={<DocumentArrowDownIcon className="w-5 h-5 stroke-2" />}
+            startContent={
+              <DocumentArrowDownIcon className="w-5 h-5 stroke-2" />
+            }
           >
             CV
           </Button>
         </NavbarItem>
       </NavbarContent>
-    </Topbar>
+    </Navbar>
   );
 }
