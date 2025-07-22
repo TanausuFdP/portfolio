@@ -4,8 +4,11 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@heroui/navbar";
 import { Squircle } from "@squircle-js/react";
 import { Button, Image, Link } from "@heroui/react";
 import { DocumentArrowDownIcon } from "@heroicons/react/24/outline";
+import { useTranslation } from "react-i18next";
 
 export default function Topbar() {
+  const { t } = useTranslation();
+
   return (
     <Navbar>
       <NavbarBrand>
@@ -30,32 +33,32 @@ export default function Topbar() {
             </Squircle>
           </Squircle>
         </div>
-        <p className="font-bold text-inherit">Tanausú</p>
+        <p className="font-bold text-inherit">{t("general.name")}</p>
       </NavbarBrand>
       <NavbarContent justify="center">
         <NavbarItem>
           <Link color="foreground" href="#">
-            Actualidad
+            {t("topbar.first")}
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="#">
-            Servicios
+            {t("topbar.second")}
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="#">
-            Trayectoria
+            {t("topbar.third")}
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="#">
-            Herramientas
+            {t("topbar.fourth")}
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="#">
-            Proyectos
+            {t("topbar.fifth")}
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -68,7 +71,7 @@ export default function Topbar() {
               <DocumentArrowDownIcon className="w-5 h-5 stroke-2" />
             }
           >
-            CV
+            {t("general.cv")}
           </Button>
         </NavbarItem>
       </NavbarContent>

@@ -1,3 +1,50 @@
 {
-  "welcome": "Welcome"
+  "general": {
+    "cv": "CV",
+    "name": "Tanausú"
+  },
+  "entry": {
+    "button": "Contact me",
+    "first": "Feel free to explore my portfolio and see what I offer",
+    "second": "— I’d love to hear your thoughts!"
+  },
+  "now": {
+    "title_first": "What am I",
+    "title_second": "currently",
+    "title_third": "doing?"
+  },
+  "resume": {
+    "years_first": "4+",
+    "years_second": "Years of",
+    "years_third": "experience",
+    "projects_first": "6",
+    "projects_second": "Participated in",
+    "projects_third": "real-world projects",
+    "users_first": "∞",
+    "users_second": "Happy",
+    "users_third": "users"
+  },
+  "services": {
+    "title_first": "My",
+    "title_second": "services",
+    "paragraph": "As a Full Stack Developer with a Computer Engineering degree from the University of Las Palmas de Gran Canaria, I enjoy building complete solutions — both server-side and client-side. Although I’m skilled across the stack, I’m especially passionate about Frontend development, where I can combine logic, design, and user experience.",
+    "frontend": "Frontend Development",
+    "backend": "Backend Development"
+  },
+  "topbar": {
+    "first": "Now",
+    "second": "Services",
+    "third": "Journey",
+    "fourth": "Tools",
+    "fifth": "Projects"
+  },
+  "welcome": {
+    "first": "Hi! I'm",
+    "second": "Tanausú Fernández",
+    "third": "I'm a",
+    "fourth": "Full Stack Developer",
+    "fifth": "with",
+    "sixth": "4 years of experience.",
+    "open_to_work": "Open to work"
+  }
 }

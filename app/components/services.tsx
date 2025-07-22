@@ -2,19 +2,19 @@
 
 import { Squircle } from "@squircle-js/react";
 import { Image } from "@heroui/react";
+import { useTranslation } from "react-i18next";
 
 export default function Services() {
+  const { t } = useTranslation();
+
   return (
     <div className="max-w-[56rem] mx-auto mt-20">
       <h2 className="text-xl font-semibold text-center">
-        Mis <span className="text-orange-500">servicios</span>
+        {t("services.title_first")}{" "}
+        <span className="text-orange-500">{t("services.title_second")}</span>
       </h2>
       <span className="opacity-50 font-semibold">
-        Como Full Stack Developer graduado en Ingeniería Informática por la
-        Universidad de Las Palmas de Gran Canaria, disfruto creando soluciones
-        completas, tanto en el lado del servidor como en el cliente. Aunque
-        domino todo el stack, me apasiona especialmente el desarrollo Frontend,
-        donde puedo combinar lógica, diseño y experiencia de usuario.
+        {t("services.paragraph")}
       </span>
       <div className="flex justify-between">
         <Squircle
@@ -32,7 +32,7 @@ export default function Services() {
                 <span className="text-6xl">🎨</span>
               </div>
               <h3 className="text-center font-semibold text-xl">
-                Front End Developer
+                {t("services.frontend")}
               </h3>
               <div className="flex flex-col gap-3 mt-10">
                 <div className="flex items-center gap-5">
@@ -198,7 +198,7 @@ export default function Services() {
                 <span className="text-6xl">⚙️</span>
               </div>
               <h3 className="text-center font-semibold text-xl">
-                Back End Developer
+                {t("services.backend")}
               </h3>
               <div className="flex flex-col gap-3 mt-10">
                 <div className="flex items-center gap-5">

@@ -2,8 +2,11 @@
 import { DocumentArrowDownIcon } from "@heroicons/react/24/outline";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import { Button } from "@heroui/react";
+import { useTranslation } from "react-i18next";
 
 export default function Bottombar() {
+  const { t } = useTranslation();
+
   return (
     <div className="fixed bottom-0 right-0 p-10 flex gap-4">
       <Button
@@ -12,7 +15,7 @@ export default function Bottombar() {
         size="lg"
         startContent={<DocumentArrowDownIcon className="w-6 h-6 stroke-2" />}
       >
-        CV
+        {t("general.cv")}
       </Button>
       <Button
         isIconOnly
