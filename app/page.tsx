@@ -1,13 +1,13 @@
 "use client";
 
 import "@/i18n";
-import Welcome from "./components/welcome";
-import Entry from "./components/entry";
-import Now from "./components/now";
-import Services from "./components/services";
-import Resume from "./components/resume";
-import Topbar from "./components/topbar";
-import Bottombar from "./components/bottombar";
+import Welcome from "./components/Welcome";
+import Entry from "./components/Entry";
+import Now from "./components/Now";
+import Services from "./components/Services";
+import Resume from "./components/Resume";
+import Topbar from "./components/Topbar";
+import Bottombar from "./components/Bottombar";
 
 export default function Home() {
   return (
