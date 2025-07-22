@@ -1,13 +1,16 @@
 "use client";
 import { Chip, Image } from "@heroui/react";
 import { Squircle } from "@squircle-js/react";
+import { useTranslation } from "react-i18next";
 
 export default function Welcome() {
+  const { t } = useTranslation();
+
   return (
     <div className="max-w-[56rem] mx-auto">
       <div className="font-semibold text-[2.5rem]">
         <div className="flex flex-wrap items-center gap-2 max-w-[42rem]">
-          <span className="opacity-30">¡Hola! Soy</span>
+          <span className="opacity-30">{t("welcome.first")}</span>
           <div className="shadow-[rgba(0,_0,_0,_0.2)_0px_0px_50px] rounded-[20px] overflow-visible">
             <Squircle
               className="border-[0.25rem] border-white"
@@ -29,11 +32,11 @@ export default function Welcome() {
               </Squircle>
             </Squircle>
           </div>
-          <span>Tanausú Fernández</span>
-          <span className="opacity-30">Soy</span>
-          <span className="ml-2">Desarrollador Full Stack</span>
-          <span className="opacity-30">con</span>
-          <span className="text-orange-500 ml-2">4 años de experiencia.</span>
+          <span>{t("welcome.second")}</span>
+          <span className="opacity-30">{t("welcome.third")}</span>
+          <span className="ml-2">{t("welcome.fourth")}</span>
+          <span className="opacity-30">{t("welcome.fifth")}</span>
+          <span className="text-orange-500 ml-2">{t("welcome.sixth")}</span>
           <div className="pl-5 flex items-center">
             <Chip
               color="success"
@@ -48,7 +51,7 @@ export default function Welcome() {
               }
               variant="faded"
             >
-              <span className="font-[500]">Open to work</span>
+              <span className="font-[500]">{t("welcome.open_to_work")}</span>
             </Chip>
           </div>
         </div>

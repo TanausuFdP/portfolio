@@ -1,3 +1,50 @@
 {
-  "welcome": "Bienvenido"
+  "general": {
+    "cv": "CV",
+    "name": "Tanausú"
+  },
+  "entry": {
+    "button": "Contáctame",
+    "first": "No dudes en navegar por mi portfolio y ver lo que ofrezco",
+    "second": "— ¡Me encantaría saber tu opinión!"
+  },
+  "now": {
+    "title_first": "¿Qué estoy haciendo",
+    "title_second": "actualmente",
+    "title_third": "?"
+  },
+  "resume": {
+    "years_first": "4+",
+    "years_second": "Años de",
+    "years_third": "experiencia",
+    "projects_first": "6",
+    "projects_second": "Involucrado en",
+    "projects_third": "proyectos reales",
+    "users_first": "∞",
+    "users_second": "Usuarios",
+    "users_third": "satisfechos"
+  },
+  "services": {
+    "title_first": "Mis",
+    "title_second": "servicios",
+    "paragraph": "Como Full Stack Developer graduado en Ingeniería Informática por la Universidad de Las Palmas de Gran Canaria, disfruto creando soluciones completas, tanto en el lado del servidor como en el cliente. Aunque domino todo el stack, me apasiona especialmente el desarrollo Frontend, donde puedo combinar lógica, diseño y experiencia de usuario.",
+    "frontend": "Desarrollo Frontend",
+    "backend": "Desarrollo Backend"
+  },
+  "topbar": {
+    "first": "Actualidad",
+    "second": "Servicios",
+    "third": "Trayectoria",
+    "fourth": "Herramientas",
+    "fifth": "Proyectos"
+  },
+  "welcome": {
+    "first": "¡Hola! Soy",
+    "second": "Tanausú Fernández",
+    "third": "Soy",
+    "fourth": "Desarrollador Full Stack",
+    "fifth": "con",
+    "sixth": "4 años de experiencia.",
+    "open_to_work": "Open to work"
+  }
 }
