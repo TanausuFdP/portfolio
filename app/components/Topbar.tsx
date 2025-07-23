@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Topbar() {
-  const { t } = useTranslation();
+  const { t, i18n: i18nextInstance } = useTranslation();
 
   return (
     <Navbar>
@@ -60,6 +60,12 @@ export default function Topbar() {
             radius="full"
             startContent={
               <DocumentArrowDownIcon className="w-5 h-5 stroke-2" />
+            }
+            onPress={() =>
+              window.open(
+                "/cv/CV-" + i18nextInstance.language + "_v2.pdf",
+                "_blank",
+              )
             }
           >
             {t("general.cv")}

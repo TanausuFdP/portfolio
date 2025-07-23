@@ -5,7 +5,7 @@ import { Button } from "@heroui/react";
 import { useTranslation } from "react-i18next";
 
 export default function Bottombar() {
-  const { t } = useTranslation();
+  const { t, i18n: i18nextInstance } = useTranslation();
 
   return (
     <div className="fixed bottom-0 right-0 p-10 flex gap-4 ">
@@ -14,6 +14,12 @@ export default function Bottombar() {
         radius="full"
         size="lg"
         startContent={<DocumentArrowDownIcon className="w-6 h-6 stroke-2" />}
+        onPress={() =>
+          window.open(
+            "/cv/CV-" + i18nextInstance.language + "_v2.pdf",
+            "_blank",
+          )
+        }
       >
         {t("general.cv")}
       </Button>
