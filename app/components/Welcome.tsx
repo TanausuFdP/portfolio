@@ -6,7 +6,7 @@ export default function Welcome() {
   const { t } = useTranslation();
 
   return (
-    <div className="max-w-[56rem] mx-auto">
+    <div className="max-w-[56rem] mx-auto" id={t("topbar.first")}>
       <div className="font-semibold text-[2.5rem]">
         <div className="flex flex-wrap items-center gap-2 max-w-[42rem]">
           <span className="opacity-30">{t("welcome.first")}</span>

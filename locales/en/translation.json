@@ -81,10 +81,11 @@
     }
   },
   "topbar": {
-    "first": "Now",
-    "second": "Services",
-    "third": "Career",
-    "fourth": "Projects"
+    "first": "Home",
+    "second": "Now",
+    "third": "Services",
+    "fourth": "Career",
+    "fifth": "Projects"
   },
   "welcome": {
     "first": "Hi! I'm",

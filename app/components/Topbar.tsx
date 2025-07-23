@@ -33,22 +33,22 @@ export default function Topbar() {
       </NavbarBrand>
       <NavbarContent justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href={"#" + t("topbar.first")}>
             {t("topbar.first")}
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href={"#" + t("topbar.second")}>
             {t("topbar.second")}
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href={"#" + t("topbar.third")}>
             {t("topbar.third")}
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href={"#" + t("topbar.fourth")}>
             {t("topbar.fourth")}
           </Link>
         </NavbarItem>
