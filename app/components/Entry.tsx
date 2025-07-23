@@ -14,6 +14,9 @@ export default function Entry() {
           radius="full"
           size="lg"
           startContent={<EnvelopeIcon className="w-6 h-6" />}
+          onPress={() =>
+            (window.location.href = `mailto:${t("general.email")}`)
+          }
         >
           {t("entry.button")}
         </Button>
