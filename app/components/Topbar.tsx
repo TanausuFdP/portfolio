@@ -11,6 +11,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 export default function Topbar() {
   const { t, i18n: i18nextInstance } = useTranslation();
   const [activeSection, setActiveSection] = useState<string | null>(null);
+  const [topOffset, setTopOffset] = useState(120);
 
   useEffect(() => {
     const sectionIds = [
@@ -49,34 +50,60 @@ export default function Topbar() {
     };
   }, [t]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const newOffset = Math.max(0, 120 - scrollY);
+
+      setTopOffset(newOffset);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <Navbar>
+    <Navbar
+      classNames={{ wrapper: "max-w-[1200px]" }}
+      isBordered={topOffset === 0}
+      style={{
+        position: "fixed",
+        paddingTop: `${topOffset}px`,
+        left: 0,
+        right: 0,
+        marginLeft: "auto",
+        marginRight: "auto",
+        width: topOffset > 0 ? "1024px" : undefined,
+        maxWidth: "100vw",
+        transition: "padding-top, width 0.3s ease",
+      }}
+    >
       <NavbarBrand>
         <div className="flex gap-2 items-center">
-          <div className="shadow-[rgba(0,_0,_0,_0.2)_0px_0px_50px] rounded-[15px]">
-            <div className="border-[0.15rem] border-white">
-              <div className="w-[32px] h-[32px]">
-                <Image
-                  alt="Profile photo"
-                  height="56"
-                  radius="none"
-                  src="/profile.jpeg"
-                  width="56"
-                />
-              </div>
+          <div className="border-[2px] border-white shadow-[rgba(0,_0,_0,_0.2)_0px_0px_20px] rounded-[10px]">
+            <div className="w-[32px] h-[32px] rounded-[8px] overflow-hidden">
+              <Image
+                alt="Profile photo"
+                height="56"
+                radius="none"
+                src="/profile.jpeg"
+                width="56"
+              />
             </div>
           </div>
           <p className="font-bold text-inherit text-2xl">{t("general.name")}</p>
-          <LanguageSwitcher />
         </div>
       </NavbarBrand>
-      <NavbarContent justify="center">
+      <NavbarContent className="gap-6" justify="center">
         <NavbarItem>
           <Link
             className={
               activeSection === t("topbar.first")
-                ? "text-orange-500 font-semibold underline underline-offset-4"
-                : "text-foreground font-[500]"
+                ? "text-primary font-semibold underline underline-offset-4 text-lg"
+                : "text-foreground font-[500] text-lg"
             }
             color="foreground"
             href={"#" + t("topbar.first")}
@@ -88,8 +115,8 @@ export default function Topbar() {
           <Link
             className={
               activeSection === t("topbar.second")
-                ? "text-orange-500 font-semibold underline underline-offset-4"
-                : "text-foreground font-[500]"
+                ? "text-primary font-semibold underline underline-offset-4 text-lg"
+                : "text-foreground font-[500] text-lg"
             }
             color="foreground"
             href={"#" + t("topbar.second")}
@@ -101,8 +128,8 @@ export default function Topbar() {
           <Link
             className={
               activeSection === t("topbar.third")
-                ? "text-orange-500 font-semibold underline underline-offset-4"
-                : "text-foreground font-[500]"
+                ? "text-primary font-semibold underline underline-offset-4 text-lg"
+                : "text-foreground font-[500] text-lg"
             }
             color="foreground"
             href={"#" + t("topbar.third")}
@@ -114,8 +141,8 @@ export default function Topbar() {
           <Link
             className={
               activeSection === t("topbar.fourth")
-                ? "text-orange-500 font-semibold underline underline-offset-4"
-                : "text-foreground font-[500]"
+                ? "text-primary font-semibold underline underline-offset-4 text-lg"
+                : "text-foreground font-[500] text-lg"
             }
             color="foreground"
             href={"#" + t("topbar.fourth")}
@@ -125,13 +152,16 @@ export default function Topbar() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
+        <LanguageSwitcher />
         <NavbarItem>
           <Button
-            className="bg-orange-500 text-white"
+            color="primary"
             radius="full"
+            size="sm"
             startContent={
-              <DocumentArrowDownIcon className="w-5 h-5 stroke-2" />
+              <DocumentArrowDownIcon className="w-4 h-4 stroke-2" />
             }
+            variant="shadow"
             onPress={() =>
               window.open(
                 "/cv/CV-" + i18nextInstance.language + "_v2.pdf",
