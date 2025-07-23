@@ -3,6 +3,26 @@
     "cv": "CV",
     "name": "Tanausú"
   },
+  "career": {
+    "title_first": "My",
+    "title_second": "career",
+    "list": {
+      "1_title": "Bachelor's Degree in Computer Engineering",
+      "1_subtitle": "Universidad de Las Palmas de Gran Canaria | 2017 - 2021",
+      "2_title": "Game Developer",
+      "2_subtitle": "The Singular Factory | 2020 | Intern",
+      "3_title": "Frontend Developer",
+      "3_subtitle": "The Singular Factory | 2021 | Intern",
+      "4_title": "Full Stack Developer",
+      "4_subtitle": "Tiendas.com | 2021",
+      "5_title": "IT Technician",
+      "5_subtitle": "Cabildo de Gran Canaria | 2021 - 2022",
+      "6_title": "Full Stack Developer",
+      "6_subtitle": "Symbyosys IT Solutions | 2022 - 2025",
+      "7_title": "Full Stack Developer",
+      "7_subtitle": "Piicate | 2025 - Actualidad"
+    }
+  },
   "entry": {
     "button": "Contact me",
     "first": "Feel free to explore my portfolio and see what I offer",
