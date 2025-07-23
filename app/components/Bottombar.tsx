@@ -4,6 +4,7 @@ import { Button } from "@heroui/react";
 import {
   IconBrandLinkedinFilled,
   IconBrandGithubFilled,
+  IconBrandThreads,
 } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -54,6 +55,17 @@ export default function Bottombar() {
         startContent={<IconBrandGithubFilled className="w-5 h-5" />}
         variant="ghost"
         onPress={() => window.open("https://github.com/TanausuFdP", "_blank")}
+      />
+      <Button
+        isIconOnly
+        className="bg-background"
+        color="primary"
+        radius="full"
+        startContent={<IconBrandThreads className="w-5 h-5" />}
+        variant="ghost"
+        onPress={() =>
+          window.open("https://www.threads.com/@tanausu.js", "_blank")
+        }
       />
     </div>
   );

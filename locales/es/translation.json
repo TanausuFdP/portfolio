@@ -27,7 +27,8 @@
   "entry": {
     "button": "Contáctame",
     "first": "No dudes en navegar por mi portfolio y ver lo que ofrezco",
-    "second": "— ¡Me encantaría saber tu opinión!"
+    "second": "— ¡Me encantaría saber tu opinión!",
+    "networks": "Mis redes"
   },
   "now": {
     "title_first": "¿Qué estoy haciendo",

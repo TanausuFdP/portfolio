@@ -17,6 +17,15 @@ const config = {
         mono: ["var(--font-geist-mono)"],
       },
     },
+    keyframes: {
+      bounceRight: {
+        "0%, 100%": { transform: "translateX(0)" },
+        "50%": { transform: "translateX(8px)" },
+      },
+    },
+    animation: {
+      bounceRight: "bounceRight 0.6s infinite",
+    },
   },
   darkMode: "class",
   plugins: [

@@ -17,7 +17,7 @@ export default function Home() {
     <div className="font-[family-name:var(--font-poppins)]">
       <Topbar />
       <div className="min-h-screen p-8 pb-20 gap-16 sm:p-20">
-        <Spacer y={56} />
+        <Spacer y={44} />
         <Welcome />
         <Spacer y={12} />
         <Entry />

@@ -11,7 +11,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 export default function Topbar() {
   const { t, i18n: i18nextInstance } = useTranslation();
   const [activeSection, setActiveSection] = useState<string | null>(null);
-  const [topOffset, setTopOffset] = useState(120);
+  const [topOffset, setTopOffset] = useState(80);
 
   useEffect(() => {
     const sectionIds = [
@@ -53,7 +53,7 @@ export default function Topbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const newOffset = Math.max(0, 120 - scrollY);
+      const newOffset = Math.max(0, 80 - scrollY);
 
       setTopOffset(newOffset);
     };
@@ -83,8 +83,8 @@ export default function Topbar() {
     >
       <NavbarBrand>
         <div className="flex gap-2 items-center">
-          <div className="border-[2px] border-white shadow-[rgba(0,_0,_0,_0.2)_0px_0px_20px] rounded-[10px]">
-            <div className="w-[32px] h-[32px] rounded-[8px] overflow-hidden">
+          <div className="border-[2px] border-white shadow-[rgba(0,_0,_0,_0.2)_0px_0px_20px] rounded-[13px] overflow-hidden">
+            <div className="w-[32px] h-[32px]">
               <Image
                 alt="Profile photo"
                 height="56"
@@ -102,7 +102,7 @@ export default function Topbar() {
           <Link
             className={
               activeSection === t("topbar.first")
-                ? "text-primary font-semibold underline underline-offset-4 text-lg"
+                ? "text-primary font-semibold underline underline-offset-[6px] text-lg"
                 : "text-foreground font-[500] text-lg"
             }
             color="foreground"
@@ -115,7 +115,7 @@ export default function Topbar() {
           <Link
             className={
               activeSection === t("topbar.second")
-                ? "text-primary font-semibold underline underline-offset-4 text-lg"
+                ? "text-primary font-semibold underline underline-offset-[6px] text-lg"
                 : "text-foreground font-[500] text-lg"
             }
             color="foreground"
@@ -128,7 +128,7 @@ export default function Topbar() {
           <Link
             className={
               activeSection === t("topbar.third")
-                ? "text-primary font-semibold underline underline-offset-4 text-lg"
+                ? "text-primary font-semibold underline underline-offset-[6px] text-lg"
                 : "text-foreground font-[500] text-lg"
             }
             color="foreground"
@@ -141,7 +141,7 @@ export default function Topbar() {
           <Link
             className={
               activeSection === t("topbar.fourth")
-                ? "text-primary font-semibold underline underline-offset-4 text-lg"
+                ? "text-primary font-semibold underline underline-offset-[6px] text-lg"
                 : "text-foreground font-[500] text-lg"
             }
             color="foreground"

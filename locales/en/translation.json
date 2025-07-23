@@ -27,7 +27,8 @@
   "entry": {
     "button": "Contact me",
     "first": "Feel free to explore my portfolio and see what I offer",
-    "second": "— I’d love to hear your thoughts!"
+    "second": "— I’d love to hear your thoughts!",
+    "networks": "My networks"
   },
   "now": {
     "title_first": "What am I",
