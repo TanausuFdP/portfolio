@@ -11,11 +11,13 @@ import Resume from "./components/Resume";
 import Topbar from "./components/Topbar";
 import Bottombar from "./components/Bottombar";
 import Career from "./components/Career";
+import AnimatedDecor from "./components/AnimatedDecor";
 
 export default function Home() {
   return (
     <div className="font-[family-name:var(--font-poppins)]">
       <Topbar />
+      <AnimatedDecor />
       <div className="min-h-screen p-8 pb-20 gap-16 sm:p-20">
         <Spacer y={44} />
         <Welcome />
