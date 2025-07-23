@@ -8,7 +8,7 @@ export default function Services() {
   const { t } = useTranslation();
 
   return (
-    <div className="max-w-[56rem] mx-auto mt-20">
+    <div className="max-w-[56rem] mx-auto mt-20 ">
       <h2 className="text-xl font-semibold text-center">
         {t("services.title_first")}{" "}
         <span className="text-orange-500">{t("services.title_second")}</span>

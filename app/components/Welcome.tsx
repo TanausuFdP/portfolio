@@ -33,7 +33,7 @@ export default function Welcome() {
               color="success"
               size="lg"
               startContent={
-                <div className="mr-2">
+                <div className="mr-2 ">
                   <span className="relative flex size-3">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-75" />
                     <span className="relative inline-flex size-3 rounded-full bg-success" />
