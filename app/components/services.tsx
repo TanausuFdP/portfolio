@@ -1,10 +1,10 @@
 "use client";
-
-import { Squircle } from "@squircle-js/react";
 import { Image } from "@heroui/react";
 import { useTranslation } from "react-i18next";
 
 export default function Services() {
+  const frontend = 6;
+  const backend = 6;
   const { t } = useTranslation();
 
   return (
@@ -17,16 +17,8 @@ export default function Services() {
         {t("services.paragraph")}
       </span>
       <div className="flex justify-between">
-        <Squircle
-          className="border-[0.35rem] border-white"
-          cornerRadius={42}
-          cornerSmoothing={1}
-        >
-          <Squircle
-            className="w-[420px] h-[700px]"
-            cornerRadius={39}
-            cornerSmoothing={0.9}
-          >
+        <div className="border-[0.35rem] border-white rounded-xl">
+          <div className="w-[420px] h-[700px]">
             <div className="p-5">
               <div className="p-3 bg-orange-500 w-min rounded-full mb-4 mt-5 mx-auto">
                 <span className="text-6xl">🎨</span>
@@ -35,164 +27,39 @@ export default function Services() {
                 {t("services.frontend")}
               </h3>
               <div className="flex flex-col gap-3 mt-10">
-                <div className="flex items-center gap-5">
-                  <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[20px] overflow-visible">
-                    <Squircle
-                      className="border-[0.25rem] border-white"
-                      cornerRadius={18}
-                      cornerSmoothing={1}
-                    >
-                      <Squircle
-                        className="w-[56px] h-[56px]"
-                        cornerRadius={14}
-                        cornerSmoothing={0.8}
-                      >
-                        <Image
-                          alt="Profile photo"
-                          height="56"
-                          radius="none"
-                          src="/services/react.png"
-                          width="56"
-                        />
-                      </Squircle>
-                    </Squircle>
-                  </div>
-                  <span className="text-lg">React</span>
-                </div>
-                <div className="flex items-center gap-5">
-                  <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[20px] overflow-visible">
-                    <Squircle
-                      className="border-[0.25rem] border-white"
-                      cornerRadius={18}
-                      cornerSmoothing={1}
-                    >
-                      <Squircle
-                        className="w-[56px] h-[56px]"
-                        cornerRadius={14}
-                        cornerSmoothing={0.8}
-                      >
-                        <Image
-                          alt="Profile photo"
-                          height="56"
-                          radius="none"
-                          src="/services/NodeJS.png"
-                          width="56"
-                        />
-                      </Squircle>
-                    </Squircle>
-                  </div>
-                  <span className="text-lg">NodeJS</span>
-                </div>
-                <div className="flex items-center gap-5">
-                  <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[20px] overflow-visible">
-                    <Squircle
-                      className="border-[0.25rem] border-white"
-                      cornerRadius={18}
-                      cornerSmoothing={1}
-                    >
-                      <Squircle
-                        className="w-[56px] h-[56px]"
-                        cornerRadius={14}
-                        cornerSmoothing={0.8}
-                      >
-                        <Image
-                          alt="Profile photo"
-                          height="56"
-                          radius="none"
-                          src="/services/NextJS.jpeg"
-                          width="56"
-                        />
-                      </Squircle>
-                    </Squircle>
-                  </div>
-                  <span className="text-lg">NextJS</span>
-                </div>
-                <div className="flex items-center gap-5">
-                  <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[20px] overflow-visible">
-                    <Squircle
-                      className="border-[0.25rem] border-white"
-                      cornerRadius={18}
-                      cornerSmoothing={1}
-                    >
-                      <Squircle
-                        className="w-[56px] h-[56px]"
-                        cornerRadius={14}
-                        cornerSmoothing={0.8}
-                      >
-                        <Image
-                          alt="Profile photo"
-                          height="56"
-                          radius="none"
-                          src="/services/Playwright.png"
-                          width="56"
-                        />
-                      </Squircle>
-                    </Squircle>
-                  </div>
-                  <span className="text-lg">Playwright</span>
-                </div>
-                <div className="flex items-center gap-5">
-                  <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[20px] overflow-visible">
-                    <Squircle
-                      className="border-[0.25rem] border-white"
-                      cornerRadius={18}
-                      cornerSmoothing={1}
-                    >
-                      <Squircle
-                        className="w-[56px] h-[56px]"
-                        cornerRadius={14}
-                        cornerSmoothing={0.8}
-                      >
-                        <Image
-                          alt="Profile photo"
-                          height="56"
-                          radius="none"
-                          src="/services/Jest.svg"
-                          width="56"
-                        />
-                      </Squircle>
-                    </Squircle>
-                  </div>
-                  <span className="text-lg">Jest</span>
-                </div>
-                <div className="flex items-center gap-5">
-                  <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[20px] overflow-visible">
-                    <Squircle
-                      className="border-[0.25rem] border-white"
-                      cornerRadius={18}
-                      cornerSmoothing={1}
-                    >
-                      <Squircle
-                        className="w-[56px] h-[56px]"
-                        cornerRadius={14}
-                        cornerSmoothing={0.8}
-                      >
-                        <Image
-                          alt="Profile photo"
-                          height="56"
-                          radius="none"
-                          src="/services/Vitest.jpg"
-                          width="56"
-                        />
-                      </Squircle>
-                    </Squircle>
-                  </div>
-                  <span className="text-lg">Vitest</span>
-                </div>
+                {[...Array(frontend)].map((_, i) => {
+                  const n = i + 1;
+
+                  return (
+                    <div key={i} className="flex items-center gap-5">
+                      <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[20px] overflow-visible">
+                        <div className="border-[0.25rem] border-white">
+                          <div className="w-[56px] h-[56px]">
+                            <Image
+                              alt="Profile photo"
+                              height="56"
+                              radius="none"
+                              src={
+                                "/services/" +
+                                t("services.frontend_list." + n + "_img")
+                              }
+                              width="56"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <span className="text-lg">
+                        {t("services.frontend_list." + n + "_name")}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
-          </Squircle>
-        </Squircle>
-        <Squircle
-          className="border-[0.35rem] border-white"
-          cornerRadius={42}
-          cornerSmoothing={1}
-        >
-          <Squircle
-            className="w-[420px] h-[700px]"
-            cornerRadius={39}
-            cornerSmoothing={0.9}
-          >
+          </div>
+        </div>
+        <div className="border-[0.35rem] border-white rounded-xl">
+          <div className="w-[420px] h-[700px]">
             <div className="p-5">
               <div className="p-3 bg-orange-500 w-min rounded-full mb-4 mt-5 mx-auto">
                 <span className="text-6xl">⚙️</span>
@@ -201,154 +68,37 @@ export default function Services() {
                 {t("services.backend")}
               </h3>
               <div className="flex flex-col gap-3 mt-10">
-                <div className="flex items-center gap-5">
-                  <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[20px] overflow-visible">
-                    <Squircle
-                      className="border-[0.25rem] border-white"
-                      cornerRadius={18}
-                      cornerSmoothing={1}
-                    >
-                      <Squircle
-                        className="w-[56px] h-[56px]"
-                        cornerRadius={14}
-                        cornerSmoothing={0.8}
-                      >
-                        <Image
-                          alt="Profile photo"
-                          height="56"
-                          radius="none"
-                          src="/services/PHP.jpg"
-                          width="56"
-                        />
-                      </Squircle>
-                    </Squircle>
-                  </div>
-                  <span className="text-lg">PHP</span>
-                </div>
-                <div className="flex items-center gap-5">
-                  <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[20px] overflow-visible">
-                    <Squircle
-                      className="border-[0.25rem] border-white"
-                      cornerRadius={18}
-                      cornerSmoothing={1}
-                    >
-                      <Squircle
-                        className="w-[56px] h-[56px]"
-                        cornerRadius={14}
-                        cornerSmoothing={0.8}
-                      >
-                        <Image
-                          alt="Profile photo"
-                          height="56"
-                          radius="none"
-                          src="/services/Java.png"
-                          width="56"
-                        />
-                      </Squircle>
-                    </Squircle>
-                  </div>
-                  <span className="text-lg">Java</span>
-                </div>
-                <div className="flex items-center gap-5">
-                  <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[20px] overflow-visible">
-                    <Squircle
-                      className="border-[0.25rem] border-white"
-                      cornerRadius={18}
-                      cornerSmoothing={1}
-                    >
-                      <Squircle
-                        className="w-[56px] h-[56px]"
-                        cornerRadius={14}
-                        cornerSmoothing={0.8}
-                      >
-                        <Image
-                          alt="Profile photo"
-                          height="56"
-                          radius="none"
-                          src="/services/Sequelize.png"
-                          width="56"
-                        />
-                      </Squircle>
-                    </Squircle>
-                  </div>
-                  <span className="text-lg">Sequelize</span>
-                </div>
-                <div className="flex items-center gap-5">
-                  <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[20px] overflow-visible">
-                    <Squircle
-                      className="border-[0.25rem] border-white"
-                      cornerRadius={18}
-                      cornerSmoothing={1}
-                    >
-                      <Squircle
-                        className="w-[56px] h-[56px]"
-                        cornerRadius={14}
-                        cornerSmoothing={0.8}
-                      >
-                        <Image
-                          alt="Profile photo"
-                          height="56"
-                          radius="none"
-                          src="/services/PostgreSQL.png"
-                          width="56"
-                        />
-                      </Squircle>
-                    </Squircle>
-                  </div>
-                  <span className="text-lg">PostgreSQL</span>
-                </div>
-                <div className="flex items-center gap-5">
-                  <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[20px] overflow-visible">
-                    <Squircle
-                      className="border-[0.25rem] border-white"
-                      cornerRadius={18}
-                      cornerSmoothing={1}
-                    >
-                      <Squircle
-                        className="w-[56px] h-[56px]"
-                        cornerRadius={14}
-                        cornerSmoothing={0.8}
-                      >
-                        <Image
-                          alt="Profile photo"
-                          height="56"
-                          radius="none"
-                          src="/services/MySQL.avif"
-                          width="56"
-                        />
-                      </Squircle>
-                    </Squircle>
-                  </div>
-                  <span className="text-lg">MySQL</span>
-                </div>
-                <div className="flex items-center gap-5">
-                  <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[20px] overflow-visible">
-                    <Squircle
-                      className="border-[0.25rem] border-white"
-                      cornerRadius={18}
-                      cornerSmoothing={1}
-                    >
-                      <Squircle
-                        className="w-[56px] h-[56px]"
-                        cornerRadius={14}
-                        cornerSmoothing={0.8}
-                      >
-                        <Image
-                          alt="Profile photo"
-                          height="56"
-                          radius="none"
-                          src="/services/MariaDB.png"
-                          width="56"
-                        />
-                      </Squircle>
-                    </Squircle>
-                  </div>
-                  <span className="text-lg">MariaDB</span>
-                </div>
+                {[...Array(backend)].map((_, i) => {
+                  const n = i + 1;
+
+                  return (
+                    <div key={i} className="flex items-center gap-5">
+                      <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[20px] overflow-visible">
+                        <div className="border-[0.25rem] border-white">
+                          <div className="w-[56px] h-[56px]">
+                            <Image
+                              alt="Profile photo"
+                              height="56"
+                              radius="none"
+                              src={
+                                "/services/" +
+                                t("services.backend_list." + n + "_img")
+                              }
+                              width="56"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <span className="text-lg">
+                        {t("services.backend_list." + n + "_name")}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
-          </Squircle>
-        </Squircle>
+          </div>
+        </div>
       </div>
     </div>
   );
