@@ -10,7 +10,7 @@ export default function Now() {
     <div className="max-w-[56rem] mx-auto" id={t("topbar.second")}>
       <h2 className="text-xl font-semibold text-center">
         {t("now.title_first")}{" "}
-        <span className="text-orange-500">{t("now.title_second")}</span>
+        <span className="text-primary">{t("now.title_second")}</span>
         {t("now.title_third")}
       </h2>
       <div className="flex flex-wrap justify-center mt-5 gap-5">

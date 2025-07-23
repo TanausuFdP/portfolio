@@ -6,7 +6,7 @@ export default function Welcome() {
   const { t } = useTranslation();
 
   return (
-    <div className="max-w-[56rem] mx-auto" id={t("topbar.first")}>
+    <div className="max-w-[40rem] mx-auto" id={t("topbar.first")}>
       <div className="font-semibold text-[2.5rem]">
         <div className="flex flex-wrap items-center gap-2 max-w-[42rem]">
           <span className="opacity-30">{t("welcome.first")}</span>
@@ -27,7 +27,7 @@ export default function Welcome() {
           <span className="opacity-30">{t("welcome.third")}</span>
           <span className="ml-2">{t("welcome.fourth")}</span>
           <span className="opacity-30">{t("welcome.fifth")}</span>
-          <span className="text-orange-500 ml-2">{t("welcome.sixth")}</span>
+          <span className="text-primary ml-2">{t("welcome.sixth")}</span>
           <div className="pl-5 flex items-center">
             <Chip
               color="success"

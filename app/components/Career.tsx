@@ -22,7 +22,7 @@ export default function Career() {
         <div className="w-[48rem] h-[400px] relative">
           <div className="absolute top-5 left-5 font-semibold text-xl px-3 py-2 rounded-full bg-white z-10">
             <span>{t("career.title_first")}</span>{" "}
-            <span className="text-orange-500">{t("career.title_second")}</span>
+            <span className="text-primary">{t("career.title_second")}</span>
           </div>
           <ScrollShadow ref={bodyRef} hideScrollBar className="w-full h-full">
             <div className="p-5">
