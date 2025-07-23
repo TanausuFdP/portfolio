@@ -13,9 +13,6 @@ export default function Services() {
         {t("services.title_first")}{" "}
         <span className="text-primary">{t("services.title_second")}</span>
       </h2>
-      <span className="opacity-50 font-semibold">
-        {t("services.paragraph")}
-      </span>
       <div className="flex justify-between">
         <div className="border-[0.35rem] border-white rounded-xl">
           <div className="w-[420px] h-[700px]">

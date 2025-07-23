@@ -12,6 +12,7 @@ import Topbar from "./components/Topbar";
 import Bottombar from "./components/Bottombar";
 import Career from "./components/Career";
 import AnimatedDecor from "./components/AnimatedDecor";
+import Paragraph from "./components/Paragraph";
 
 export default function Home() {
   return (
@@ -23,6 +24,8 @@ export default function Home() {
         <Welcome />
         <Spacer y={12} />
         <Entry />
+        <Spacer y={64} />
+        <Paragraph />
         <Spacer y={64} />
         <Now />
         <Spacer y={48} />
