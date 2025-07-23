@@ -6,7 +6,7 @@ export default function Resume() {
   const { t } = useTranslation();
 
   return (
-    <div className="max-w-[56rem] mx-auto mt-16 ">
+    <div className="max-w-[56rem] mx-auto">
       <div className="flex gap-20 justify-center items-center">
         <div className="flex flex-col justify-center items-center gap-5">
           <div className="w-20 h-20 bg-orange-500 flex items-center justify-center rounded-full">

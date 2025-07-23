@@ -1,6 +1,8 @@
 "use client";
 
 import "@/i18n";
+import { Spacer } from "@heroui/react";
+
 import Welcome from "./components/Welcome";
 import Entry from "./components/Entry";
 import Now from "./components/Now";
@@ -15,11 +17,16 @@ export default function Home() {
     <div className="font-[family-name:var(--font-geist-sans)]">
       <Topbar />
       <div className="min-h-screen p-8 pb-20 gap-16 sm:p-20">
+        <Spacer y={56} />
         <Welcome />
         <Entry />
+        <Spacer y={64} />
         <Now />
+        <Spacer y={48} />
         <Services />
+        <Spacer y={48} />
         <Resume />
+        <Spacer y={48} />
         <Career />
       </div>
       <Bottombar />

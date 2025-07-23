@@ -7,7 +7,7 @@ export default function Now() {
   const { t } = useTranslation();
 
   return (
-    <div className="max-w-[56rem] mx-auto mt-20" id={t("topbar.second")}>
+    <div className="max-w-[56rem] mx-auto" id={t("topbar.second")}>
       <h2 className="text-xl font-semibold text-center">
         {t("now.title_first")}{" "}
         <span className="text-orange-500">{t("now.title_second")}</span>

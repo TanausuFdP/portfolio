@@ -2,7 +2,7 @@
 
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@heroui/navbar";
 import { Button, Image, Link } from "@heroui/react";
-import { DocumentArrowDownIcon } from "@heroicons/react/24/outline";
+import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 
@@ -155,12 +155,11 @@ export default function Topbar() {
         <LanguageSwitcher />
         <NavbarItem>
           <Button
+            className="text-md gap-1"
             color="primary"
             radius="full"
             size="sm"
-            startContent={
-              <DocumentArrowDownIcon className="w-4 h-4 stroke-2" />
-            }
+            startContent={<ArrowDownCircleIcon className="w-5 h-5 stroke-2" />}
             variant="shadow"
             onPress={() =>
               window.open(
