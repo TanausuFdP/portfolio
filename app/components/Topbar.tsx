@@ -4,11 +4,50 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@heroui/navbar";
 import { Button, Image, Link } from "@heroui/react";
 import { DocumentArrowDownIcon } from "@heroicons/react/24/outline";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
 
 import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Topbar() {
-  const { t } = useTranslation();
+  const { t, i18n: i18nextInstance } = useTranslation();
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+
+  useEffect(() => {
+    const sectionIds = [
+      t("topbar.first"),
+      t("topbar.second"),
+      t("topbar.third"),
+      t("topbar.fourth"),
+    ];
+
+    const observers: IntersectionObserver[] = [];
+
+    sectionIds.forEach((id) => {
+      const element = document.getElementById(id);
+
+      if (!element) return;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActiveSection(id);
+          }
+        },
+        {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.5,
+        }
+      );
+
+      observer.observe(element);
+      observers.push(observer);
+    });
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
+  }, [t]);
 
   return (
     <Navbar>
@@ -33,22 +72,54 @@ export default function Topbar() {
       </NavbarBrand>
       <NavbarContent justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link
+            className={
+              activeSection === t("topbar.first")
+                ? "text-orange-500 font-semibold underline underline-offset-4"
+                : "text-foreground font-[500]"
+            }
+            color="foreground"
+            href={"#" + t("topbar.first")}
+          >
             {t("topbar.first")}
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link
+            className={
+              activeSection === t("topbar.second")
+                ? "text-orange-500 font-semibold underline underline-offset-4"
+                : "text-foreground font-[500]"
+            }
+            color="foreground"
+            href={"#" + t("topbar.second")}
+          >
             {t("topbar.second")}
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link
+            className={
+              activeSection === t("topbar.third")
+                ? "text-orange-500 font-semibold underline underline-offset-4"
+                : "text-foreground font-[500]"
+            }
+            color="foreground"
+            href={"#" + t("topbar.third")}
+          >
             {t("topbar.third")}
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link
+            className={
+              activeSection === t("topbar.fourth")
+                ? "text-orange-500 font-semibold underline underline-offset-4"
+                : "text-foreground font-[500]"
+            }
+            color="foreground"
+            href={"#" + t("topbar.fourth")}
+          >
             {t("topbar.fourth")}
           </Link>
         </NavbarItem>
@@ -60,6 +131,12 @@ export default function Topbar() {
             radius="full"
             startContent={
               <DocumentArrowDownIcon className="w-5 h-5 stroke-2" />
+            }
+            onPress={() =>
+              window.open(
+                "/cv/CV-" + i18nextInstance.language + "_v2.pdf",
+                "_blank"
+              )
             }
           >
             {t("general.cv")}

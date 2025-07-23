@@ -1,7 +1,8 @@
 {
   "general": {
     "cv": "CV",
-    "name": "Tanausú"
+    "name": "Tanausú",
+    "email": "tanausufdp@icloud.com"
   },
   "career": {
     "title_first": "Mi",
@@ -80,10 +81,11 @@
     }
   },
   "topbar": {
-    "first": "Actualidad",
-    "second": "Servicios",
-    "third": "Trayectoria",
-    "fourth": "Proyectos"
+    "first": "Inicio",
+    "second": "Actualidad",
+    "third": "Servicios",
+    "fourth": "Trayectoria",
+    "fifth": "Proyectos"
   },
   "welcome": {
     "first": "¡Hola! Soy",
