@@ -97,7 +97,7 @@ export default function Topbar() {
           <p className="font-bold text-inherit text-2xl">{t("general.name")}</p>
         </div>
       </NavbarBrand>
-      <NavbarContent className="gap-6" justify="center">
+      <NavbarContent className="gap-6 font-quicksand" justify="center">
         <NavbarItem>
           <Link
             className={

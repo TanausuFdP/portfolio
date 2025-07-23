@@ -5,13 +5,17 @@ import { useTranslation } from "react-i18next";
 import { IconBrandGithubFilled, IconBrandLinkedin } from "@tabler/icons-react";
 
 export default function Entry() {
-  const { t } = useTranslation();
+  const { t, i18n: i18nextInstance } = useTranslation();
 
   return (
-    <div className="max-w-[56rem] mx-auto mt-16 ">
+    <div
+      className={`${
+        i18nextInstance.language === "en" ? "w-[40rem]" : "w-[41rem]"
+      } max-w-full mx-auto`}
+    >
       <div className="flex gap-5 items-center">
         <Button
-          className="bg-black text-white"
+          color="primary"
           radius="full"
           size="lg"
           startContent={<EnvelopeIcon className="w-6 h-6" />}
@@ -21,7 +25,7 @@ export default function Entry() {
         >
           {t("entry.button")}
         </Button>
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 font-quicksand">
           <span className="font-[500]">{t("entry.first")}</span>
           <span className="font-[500]">{t("entry.second")}</span>
         </div>

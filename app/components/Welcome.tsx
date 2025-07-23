@@ -3,14 +3,19 @@ import { Chip, Image } from "@heroui/react";
 import { useTranslation } from "react-i18next";
 
 export default function Welcome() {
-  const { t } = useTranslation();
+  const { t, i18n: i18nextInstance } = useTranslation();
 
   return (
-    <div className="max-w-[40rem] mx-auto" id={t("topbar.first")}>
+    <div
+      className={`${
+        i18nextInstance.language === "en" ? "w-[40rem]" : "w-[43rem]"
+      } max-w-full mx-auto`}
+      id={t("topbar.first")}
+    >
       <div className="font-semibold text-[2.5rem]">
-        <div className="flex flex-wrap items-center gap-2 max-w-[42rem]">
+        <div className="flex flex-wrap items-center gap-2">
           <span className="opacity-30">{t("welcome.first")}</span>
-          <div className="shadow-[rgba(0,_0,_0,_0.2)_0px_0px_50px] rounded-[20px] overflow-visible">
+          <div className="shadow-[rgba(0,_0,_0,_0.2)_0px_0px_50px] rounded-[20px] overflow-hidden">
             <div className="border-[0.25rem] border-white">
               <div className="w-[56px] h-[56px]">
                 <Image

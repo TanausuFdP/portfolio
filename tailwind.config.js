@@ -10,8 +10,11 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)"],
-        mono: ["var(--font-mono)"],
+        poppins: ["var(--font-poppins)"],
+        karla: ["var(--font-karla)"],
+        quicksand: ["var(--font-quicksand)"],
+        sans: ["var(--font-geist-sans)"],
+        mono: ["var(--font-geist-mono)"],
       },
     },
   },
