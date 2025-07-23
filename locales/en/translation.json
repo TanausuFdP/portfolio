@@ -49,7 +49,35 @@
     "title_second": "services",
     "paragraph": "As a Full Stack Developer with a Computer Engineering degree from the University of Las Palmas de Gran Canaria, I enjoy building complete solutions — both server-side and client-side. Although I’m skilled across the stack, I’m especially passionate about Frontend development, where I can combine logic, design, and user experience.",
     "frontend": "Frontend Development",
-    "backend": "Backend Development"
+    "backend": "Backend Development",
+    "frontend_list": {
+      "1_name": "React",
+      "1_img": "react.png",
+      "2_name": "NodeJS",
+      "2_img": "NodeJS.png",
+      "3_name": "NextJS",
+      "3_img": "NextJS.jpeg",
+      "4_name": "Playwright",
+      "4_img": "Playwright.png",
+      "5_name": "Jest",
+      "5_img": "Jest.svg",
+      "6_name": "Vitest",
+      "6_img": "Vitest.jpg"
+    },
+    "backend_list": {
+      "1_name": "PHP",
+      "1_img": "PHP.jpg",
+      "2_name": "Java",
+      "2_img": "Java.png",
+      "3_name": "Sequelize",
+      "3_img": "Sequelize.png",
+      "4_name": "PostgreSQL",
+      "4_img": "PostgreSQL.png",
+      "5_name": "MySQL",
+      "5_img": "MySQL.avif",
+      "6_name": "MariaDB",
+      "6_img": "MariaDB.png"
+    }
   },
   "topbar": {
     "first": "Now",

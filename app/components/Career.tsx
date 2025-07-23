@@ -1,6 +1,5 @@
 "use client";
 import { ScrollShadow } from "@heroui/react";
-import { Squircle } from "@squircle-js/react";
 import { IconPointFilled } from "@tabler/icons-react";
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
@@ -19,16 +18,8 @@ export default function Career() {
 
   return (
     <div className="max-w-[48rem] mx-auto">
-      <Squircle
-        className="border-[0.35rem] border-white"
-        cornerRadius={42}
-        cornerSmoothing={1}
-      >
-        <Squircle
-          className="w-[48rem] h-[400px] relative"
-          cornerRadius={39}
-          cornerSmoothing={0.9}
-        >
+      <div className="border-[0.35rem] border-white">
+        <div className="w-[48rem] h-[400px] relative">
           <div className="absolute top-5 left-5 font-semibold text-xl px-3 py-2 rounded-full bg-white z-10">
             <span>{t("career.title_first")}</span>{" "}
             <span className="text-orange-500">{t("career.title_second")}</span>
@@ -59,8 +50,8 @@ export default function Career() {
               </div>
             </div>
           </ScrollShadow>
-        </Squircle>
-      </Squircle>
+        </div>
+      </div>
     </div>
   );
 }

@@ -7,7 +7,7 @@ export default function Entry() {
   const { t } = useTranslation();
 
   return (
-    <div className="max-w-[56rem] mx-auto mt-16">
+    <div className="max-w-[56rem] mx-auto mt-16 ">
       <div className="flex gap-5 items-center">
         <Button
           className="bg-black text-white"

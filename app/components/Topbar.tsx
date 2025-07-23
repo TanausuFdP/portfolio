@@ -1,7 +1,6 @@
 "use client";
 
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@heroui/navbar";
-import { Squircle } from "@squircle-js/react";
 import { Button, Image, Link } from "@heroui/react";
 import { DocumentArrowDownIcon } from "@heroicons/react/24/outline";
 import { useTranslation } from "react-i18next";
@@ -15,17 +14,9 @@ export default function Topbar() {
     <Navbar>
       <NavbarBrand>
         <div className="flex gap-2 items-center">
-          <div className="shadow-[rgba(0,_0,_0,_0.2)_0px_0px_50px] rounded-[15px] overflow-visible">
-            <Squircle
-              className="border-[0.15rem] border-white"
-              cornerRadius={14}
-              cornerSmoothing={1}
-            >
-              <Squircle
-                className="w-[32px] h-[32px]"
-                cornerRadius={12}
-                cornerSmoothing={0.8}
-              >
+          <div className="shadow-[rgba(0,_0,_0,_0.2)_0px_0px_50px] rounded-[15px]">
+            <div className="border-[0.15rem] border-white">
+              <div className="w-[32px] h-[32px]">
                 <Image
                   alt="Profile photo"
                   height="56"
@@ -33,8 +24,8 @@ export default function Topbar() {
                   src="/profile.jpeg"
                   width="56"
                 />
-              </Squircle>
-            </Squircle>
+              </div>
+            </div>
           </div>
           <p className="font-bold text-inherit text-2xl">{t("general.name")}</p>
           <LanguageSwitcher />
