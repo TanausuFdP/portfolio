@@ -1,6 +1,5 @@
 "use client";
 
-import { Squircle } from "@squircle-js/react";
 import { Image } from "@heroui/react";
 import { useTranslation } from "react-i18next";
 
@@ -15,17 +14,9 @@ export default function Now() {
         {t("now.title_third")}
       </h2>
       <div className="flex flex-wrap justify-center mt-5 gap-5">
-        <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[42px] overflow-visible">
-          <Squircle
-            className="border-[0.35rem] border-white"
-            cornerRadius={42}
-            cornerSmoothing={1}
-          >
-            <Squircle
-              className="w-[530px] h-[256px]"
-              cornerRadius={39}
-              cornerSmoothing={0.9}
-            >
+        <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[42px]">
+          <div className="border-[0.35rem] border-white">
+            <div className="w-[530px] h-[256px] relative overflow-hidden">
               <Image
                 alt="Profile photo"
                 height="256"
@@ -33,20 +24,12 @@ export default function Now() {
                 src="/profile.jpeg"
                 width="530"
               />
-            </Squircle>
-          </Squircle>
+            </div>
+          </div>
         </div>
-        <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[42px] overflow-visible">
-          <Squircle
-            className="border-[0.35rem] border-white"
-            cornerRadius={42}
-            cornerSmoothing={1}
-          >
-            <Squircle
-              className="w-[256px] h-[256px]"
-              cornerRadius={39}
-              cornerSmoothing={0.9}
-            >
+        <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[42px]">
+          <div className="border-[0.35rem] border-white">
+            <div className="w-[256px] h-[256px]">
               <Image
                 alt="Profile photo"
                 height="256"
@@ -54,20 +37,12 @@ export default function Now() {
                 src="/profile.jpeg"
                 width="256"
               />
-            </Squircle>
-          </Squircle>
+            </div>
+          </div>
         </div>
-        <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[42px] overflow-visible">
-          <Squircle
-            className="border-[0.35rem] border-white"
-            cornerRadius={42}
-            cornerSmoothing={1}
-          >
-            <Squircle
-              className="w-[256px] h-[256px]"
-              cornerRadius={39}
-              cornerSmoothing={0.9}
-            >
+        <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[42px]">
+          <div className="border-[0.35rem] border-white">
+            <div className="w-[256px] h-[256px]">
               <Image
                 alt="Profile photo"
                 height="256"
@@ -75,20 +50,12 @@ export default function Now() {
                 src="/profile.jpeg"
                 width="256"
               />
-            </Squircle>
-          </Squircle>
+            </div>
+          </div>
         </div>
-        <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[42px] overflow-visible">
-          <Squircle
-            className="border-[0.35rem] border-white"
-            cornerRadius={42}
-            cornerSmoothing={1}
-          >
-            <Squircle
-              className="w-[256px] h-[256px]"
-              cornerRadius={39}
-              cornerSmoothing={0.9}
-            >
+        <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[42px]">
+          <div className="border-[0.35rem] border-white">
+            <div className="w-[256px] h-[256px]">
               <Image
                 alt="Profile photo"
                 height="256"
@@ -96,20 +63,12 @@ export default function Now() {
                 src="/profile.jpeg"
                 width="256"
               />
-            </Squircle>
-          </Squircle>
+            </div>
+          </div>
         </div>
-        <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[42px] overflow-visible">
-          <Squircle
-            className="border-[0.35rem] border-white"
-            cornerRadius={42}
-            cornerSmoothing={1}
-          >
-            <Squircle
-              className="w-[256px] h-[256px]"
-              cornerRadius={39}
-              cornerSmoothing={0.9}
-            >
+        <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[42px]">
+          <div className="border-[0.35rem] border-white">
+            <div className="w-[256px] h-[256px]">
               <Image
                 alt="Profile photo"
                 height="256"
@@ -117,8 +76,8 @@ export default function Now() {
                 src="/profile.jpeg"
                 width="256"
               />
-            </Squircle>
-          </Squircle>
+            </div>
+          </div>
         </div>
       </div>
     </div>

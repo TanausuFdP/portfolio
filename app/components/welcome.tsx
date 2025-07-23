@@ -1,6 +1,5 @@
 "use client";
 import { Chip, Image } from "@heroui/react";
-import { Squircle } from "@squircle-js/react";
 import { useTranslation } from "react-i18next";
 
 export default function Welcome() {
@@ -12,16 +11,8 @@ export default function Welcome() {
         <div className="flex flex-wrap items-center gap-2 max-w-[42rem]">
           <span className="opacity-30">{t("welcome.first")}</span>
           <div className="shadow-[rgba(0,_0,_0,_0.2)_0px_0px_50px] rounded-[20px] overflow-visible">
-            <Squircle
-              className="border-[0.25rem] border-white"
-              cornerRadius={18}
-              cornerSmoothing={1}
-            >
-              <Squircle
-                className="w-[56px] h-[56px]"
-                cornerRadius={14}
-                cornerSmoothing={0.8}
-              >
+            <div className="border-[0.25rem] border-white">
+              <div className="w-[56px] h-[56px]">
                 <Image
                   alt="Profile photo"
                   height="56"
@@ -29,8 +20,8 @@ export default function Welcome() {
                   src="/profile.jpeg"
                   width="56"
                 />
-              </Squircle>
-            </Squircle>
+              </div>
+            </div>
           </div>
           <span>{t("welcome.second")}</span>
           <span className="opacity-30">{t("welcome.third")}</span>
