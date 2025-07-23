@@ -61,11 +61,6 @@ export default function Topbar() {
             {t("topbar.fourth")}
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            {t("topbar.fifth")}
-          </Link>
-        </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>

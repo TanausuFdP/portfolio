@@ -3,6 +3,26 @@
     "cv": "CV",
     "name": "Tanausú"
   },
+  "career": {
+    "title_first": "Mi",
+    "title_second": "trayectoria",
+    "list": {
+      "1_title": "Grado en Ingeniería Informática",
+      "1_subtitle": "Universidad de Las Palmas de Gran Canaria | 2017 - 2021",
+      "2_title": "Desarrollador de videojuegos",
+      "2_subtitle": "The Singular Factory | 2020 | Prácticas",
+      "3_title": "Desarrollador Frontend",
+      "3_subtitle": "The Singular Factory | 2021 | Prácticas",
+      "4_title": "Desarrollador Full Stack",
+      "4_subtitle": "Tiendas.com | 2021",
+      "5_title": "Técnico superior en informática",
+      "5_subtitle": "Cabildo de Gran Canaria | 2021 - 2022",
+      "6_title": "Desarrollador Full Stack",
+      "6_subtitle": "Symbyosys IT Solutions | 2022 - 2025",
+      "7_title": "Desarrollador Full Stack",
+      "7_subtitle": "Piicate | 2025 - Actualidad"
+    }
+  },
   "entry": {
     "button": "Contáctame",
     "first": "No dudes en navegar por mi portfolio y ver lo que ofrezco",
@@ -35,8 +55,7 @@
     "first": "Actualidad",
     "second": "Servicios",
     "third": "Trayectoria",
-    "fourth": "Herramientas",
-    "fifth": "Proyectos"
+    "fourth": "Proyectos"
   },
   "welcome": {
     "first": "¡Hola! Soy",

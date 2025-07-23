@@ -8,6 +8,7 @@ import Services from "./components/Services";
 import Resume from "./components/Resume";
 import Topbar from "./components/Topbar";
 import Bottombar from "./components/Bottombar";
+import Career from "./components/Career";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Now />
         <Services />
         <Resume />
+        <Career />
       </div>
       <Bottombar />
     </div>
