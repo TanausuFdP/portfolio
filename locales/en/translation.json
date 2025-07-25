@@ -33,7 +33,14 @@
   "now": {
     "title_first": "What am I",
     "title_second": "currently",
-    "title_third": "doing?"
+    "title_third": "doing?",
+    "descriptions": {
+      "first": "Learning to program for iOS with Swift and Xcode",
+      "second": "Full web app built with Next.js",
+      "third": "Digital marketing for a personal trainer",
+      "fourth": "Mini-projects to showcase on my GitHub",
+      "fifth": "My own suspense novel"
+    }
   },
   "resume": {
     "years_first": "4+",

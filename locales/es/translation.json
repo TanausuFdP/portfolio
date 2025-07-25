@@ -33,7 +33,14 @@
   "now": {
     "title_first": "¿Qué estoy haciendo",
     "title_second": "actualmente",
-    "title_third": "?"
+    "title_third": "?",
+    "descriptions": {
+      "first": "Aprendiendo a programar para iOS con Swift y XCode",
+      "second": "App web completa con NextJS",
+      "third": "Marketing Digital para una entrenadora personal",
+      "fourth": "Mini-proyectos para mostrar en mi GitHub",
+      "fifth": "Mi propia novela de suspense"
+    }
   },
   "resume": {
     "years_first": "4+",
