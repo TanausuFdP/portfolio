@@ -7,9 +7,14 @@ export default function Resume() {
 
   return (
     <div className="max-w-[56rem] mx-auto">
+      <div className="w-full text-center pb-24">
+        <span className="opacity-50 font-semibold font-quicksand text-xl">
+          {t("resume.slogan")}
+        </span>
+      </div>
       <div className="flex gap-20 justify-center items-center">
         <div className="flex flex-col justify-center items-center gap-5">
-          <div className="w-20 h-20 bg-primary flex items-center justify-center rounded-full">
+          <div className="w-20 h-20 bg-primary flex items-center justify-center rounded-full btn-shadow-primary">
             <span className="text-2xl font-bold text-white">
               {t("resume.years_first")}
             </span>
@@ -22,7 +27,7 @@ export default function Resume() {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center gap-5">
-          <div className="w-20 h-20 bg-primary flex items-center justify-center rounded-full">
+          <div className="w-20 h-20 bg-primary flex items-center justify-center rounded-full btn-shadow-primary">
             <span className="text-2xl font-bold text-white">
               {t("resume.projects_first")}
             </span>
@@ -35,7 +40,7 @@ export default function Resume() {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center gap-5">
-          <div className="w-20 h-20 bg-primary flex items-center justify-center rounded-full">
+          <div className="w-20 h-20 bg-primary flex items-center justify-center rounded-full btn-shadow-primary">
             <span className="text-4xl font-semibold text-white">
               {t("resume.users_first")}
             </span>
