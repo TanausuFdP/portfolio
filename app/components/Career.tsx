@@ -18,7 +18,7 @@ export default function Career() {
 
   return (
     <div className="max-w-[48rem] mx-auto" id={t("topbar.fourth")}>
-      <div className="border-[0.35rem] border-white">
+      <div className="border-[0.25rem] border-white rounded-[2rem] shadow-[rgba(0,_0,_0,_0.1)_0px_0px_40px] overflow-hidden">
         <div className="w-[48rem] h-[400px] relative">
           <div className="absolute top-5 left-5 font-semibold text-xl px-3 py-2 rounded-full bg-white z-10">
             <span>{t("career.title_first")}</span>{" "}
