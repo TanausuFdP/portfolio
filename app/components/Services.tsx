@@ -13,11 +13,11 @@ export default function Services() {
         {t("services.title_first")}{" "}
         <span className="text-primary">{t("services.title_second")}</span>
       </h2>
-      <div className="flex justify-between">
-        <div className="border-[0.35rem] border-white rounded-xl">
+      <div className="flex justify-between mt-8">
+        <div className="border-[0.25rem] border-white rounded-[2rem] shadow-[rgba(0,_0,_0,_0.1)_0px_0px_40px] overflow-hidden">
           <div className="w-[420px] h-[700px]">
             <div className="p-5">
-              <div className="p-3 bg-primary w-min rounded-full mb-4 mt-5 mx-auto">
+              <div className="p-3 bg-primary w-min rounded-full mb-4 mt-5 mx-auto btn-shadow-primary">
                 <span className="text-6xl">🎨</span>
               </div>
               <h3 className="text-center font-semibold text-xl">
@@ -29,20 +29,18 @@ export default function Services() {
 
                   return (
                     <div key={i} className="flex items-center gap-5">
-                      <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[20px] overflow-visible">
-                        <div className="border-[0.25rem] border-white">
-                          <div className="w-[56px] h-[56px]">
-                            <Image
-                              alt="Profile photo"
-                              height="56"
-                              radius="none"
-                              src={
-                                "/services/" +
-                                t("services.frontend_list." + n + "_img")
-                              }
-                              width="56"
-                            />
-                          </div>
+                      <div className="border-[0.2rem] border-white shadow-[rgba(0,_0,_0,_0.2)_0px_0px_20px] rounded-[20px] overflow-hidden">
+                        <div className="w-[56px] h-[56px]">
+                          <Image
+                            alt="Profile photo"
+                            height="56"
+                            radius="none"
+                            src={
+                              "/services/" +
+                              t("services.frontend_list." + n + "_img")
+                            }
+                            width="56"
+                          />
                         </div>
                       </div>
                       <span className="text-lg">
@@ -55,10 +53,10 @@ export default function Services() {
             </div>
           </div>
         </div>
-        <div className="border-[0.35rem] border-white rounded-xl">
+        <div className="border-[0.25rem] border-white rounded-[2rem] shadow-[rgba(0,_0,_0,_0.1)_0px_0px_40px] overflow-hidden">
           <div className="w-[420px] h-[700px]">
             <div className="p-5">
-              <div className="p-3 bg-primary w-min rounded-full mb-4 mt-5 mx-auto">
+              <div className="p-3 bg-primary w-min rounded-full mb-4 mt-5 mx-auto btn-shadow-primary">
                 <span className="text-6xl">⚙️</span>
               </div>
               <h3 className="text-center font-semibold text-xl">
@@ -70,20 +68,18 @@ export default function Services() {
 
                   return (
                     <div key={i} className="flex items-center gap-5">
-                      <div className="shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[20px] overflow-visible">
-                        <div className="border-[0.25rem] border-white">
-                          <div className="w-[56px] h-[56px]">
-                            <Image
-                              alt="Profile photo"
-                              height="56"
-                              radius="none"
-                              src={
-                                "/services/" +
-                                t("services.backend_list." + n + "_img")
-                              }
-                              width="56"
-                            />
-                          </div>
+                      <div className="border-[0.2rem] border-white shadow-[rgba(0,_0,_0,_0.2)_0px_0px_20px] rounded-[20px] overflow-hidden">
+                        <div className="w-[56px] h-[56px]">
+                          <Image
+                            alt="Profile photo"
+                            height="56"
+                            radius="none"
+                            src={
+                              "/services/" +
+                              t("services.backend_list." + n + "_img")
+                            }
+                            width="56"
+                          />
                         </div>
                       </div>
                       <span className="text-lg">
