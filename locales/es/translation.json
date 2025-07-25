@@ -27,12 +27,20 @@
   "entry": {
     "button": "Contáctame",
     "first": "No dudes en navegar por mi portfolio y ver lo que ofrezco",
-    "second": "— ¡Me encantaría saber tu opinión!"
+    "second": "— ¡Me encantaría saber tu opinión!",
+    "networks": "Mis redes"
   },
   "now": {
     "title_first": "¿Qué estoy haciendo",
     "title_second": "actualmente",
-    "title_third": "?"
+    "title_third": "?",
+    "descriptions": {
+      "first": "Aprendiendo a programar para iOS con Swift y XCode",
+      "second": "App web completa con NextJS",
+      "third": "Marketing Digital para una entrenadora personal",
+      "fourth": "Mini-proyectos para mostrar en mi GitHub",
+      "fifth": "Mi propia novela de suspense"
+    }
   },
   "resume": {
     "years_first": "4+",
@@ -43,12 +51,13 @@
     "projects_third": "proyectos reales",
     "users_first": "∞",
     "users_second": "Usuarios",
-    "users_third": "satisfechos"
+    "users_third": "satisfechos",
+    "slogan": "«Hazlo sencillo o hazlo de nuevo.»"
   },
   "services": {
     "title_first": "Mis",
     "title_second": "servicios",
-    "paragraph": "Como Full Stack Developer graduado en Ingeniería Informática por la Universidad de Las Palmas de Gran Canaria, disfruto creando soluciones completas, tanto en el lado del servidor como en el cliente. Aunque domino todo el stack, me apasiona especialmente el desarrollo Frontend, donde puedo combinar lógica, diseño y experiencia de usuario.",
+    "paragraph": "«Como Desarrollador Full Stack graduado en Ingeniería Informática por la Universidad de Las Palmas de Gran Canaria, disfruto creando soluciones completas, tanto en el lado del servidor como en el cliente. Aunque domino todo el stack, me apasiona especialmente el desarrollo Frontend, donde puedo combinar lógica, diseño y experiencia de usuario.»",
     "frontend": "Desarrollo Frontend",
     "backend": "Desarrollo Backend",
     "frontend_list": {

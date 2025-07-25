@@ -1,35 +1,71 @@
 "use client";
-import { DocumentArrowDownIcon } from "@heroicons/react/24/outline";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import { Button } from "@heroui/react";
+import {
+  IconBrandLinkedinFilled,
+  IconBrandGithubFilled,
+  IconBrandThreads,
+} from "@tabler/icons-react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function Bottombar() {
-  const { t, i18n: i18nextInstance } = useTranslation();
+  const { t } = useTranslation();
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setVisible(window.scrollY > 750);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div className="fixed bottom-0 right-0 p-10 flex gap-4 ">
-      <Button
-        className="bg-white border border-orange-500 text-orange-500 font-semibold shadow-orange-500"
-        radius="full"
-        size="lg"
-        startContent={<DocumentArrowDownIcon className="w-6 h-6 stroke-2" />}
-        onPress={() =>
-          window.open(
-            "/cv/CV-" + i18nextInstance.language + "_v2.pdf",
-            "_blank",
-          )
-        }
-      >
-        {t("general.cv")}
-      </Button>
+    <div
+      className={`fixed right-0 p-10 flex gap-3 z-40 transition-all duration-300 ${
+        visible ? "bottom-0" : "-bottom-28"
+      }`}
+    >
       <Button
         isIconOnly
-        className="bg-orange-500 text-white"
+        color="primary"
         radius="full"
-        size="lg"
-        startContent={<EnvelopeIcon className="w-6 h-6" />}
+        startContent={<EnvelopeIcon className="w-5 h-5" />}
         onPress={() => (window.location.href = `mailto:${t("general.email")}`)}
+      />
+      <Button
+        isIconOnly
+        className="bg-background"
+        color="primary"
+        radius="full"
+        startContent={<IconBrandLinkedinFilled className="w-5 h-5" />}
+        variant="ghost"
+        onPress={() =>
+          window.open("https://www.linkedin.com/in/tanausufdp/", "_blank")
+        }
+      />
+      <Button
+        isIconOnly
+        className="bg-background"
+        color="primary"
+        radius="full"
+        startContent={<IconBrandGithubFilled className="w-5 h-5" />}
+        variant="ghost"
+        onPress={() => window.open("https://github.com/TanausuFdP", "_blank")}
+      />
+      <Button
+        isIconOnly
+        className="bg-background"
+        color="primary"
+        radius="full"
+        startContent={<IconBrandThreads className="w-5 h-5" />}
+        variant="ghost"
+        onPress={() =>
+          window.open("https://www.threads.com/@tanausu.js", "_blank")
+        }
       />
     </div>
   );

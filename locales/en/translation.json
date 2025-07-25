@@ -27,12 +27,20 @@
   "entry": {
     "button": "Contact me",
     "first": "Feel free to explore my portfolio and see what I offer",
-    "second": "— I’d love to hear your thoughts!"
+    "second": "— I’d love to hear your thoughts!",
+    "networks": "My networks"
   },
   "now": {
     "title_first": "What am I",
     "title_second": "currently",
-    "title_third": "doing?"
+    "title_third": "doing?",
+    "descriptions": {
+      "first": "Learning to program for iOS with Swift and Xcode",
+      "second": "Full web app built with Next.js",
+      "third": "Digital marketing for a personal trainer",
+      "fourth": "Mini-projects to showcase on my GitHub",
+      "fifth": "My own suspense novel"
+    }
   },
   "resume": {
     "years_first": "4+",
@@ -43,12 +51,13 @@
     "projects_third": "real-world projects",
     "users_first": "∞",
     "users_second": "Happy",
-    "users_third": "users"
+    "users_third": "users",
+    "slogan": "«Make it simple or make it again.»"
   },
   "services": {
     "title_first": "My",
     "title_second": "services",
-    "paragraph": "As a Full Stack Developer with a Computer Engineering degree from the University of Las Palmas de Gran Canaria, I enjoy building complete solutions — both server-side and client-side. Although I’m skilled across the stack, I’m especially passionate about Frontend development, where I can combine logic, design, and user experience.",
+    "paragraph": "«As a Full Stack Developer with a Computer Engineering degree from the University of Las Palmas de Gran Canaria, I enjoy building complete solutions — both server-side and client-side. Although I’m skilled across the stack, I’m especially passionate about Frontend development, where I can combine logic, design, and user experience.»",
     "frontend": "Frontend Development",
     "backend": "Backend Development",
     "frontend_list": {

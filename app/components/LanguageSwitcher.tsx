@@ -16,10 +16,10 @@ export default function LanguageSwitcher() {
 
   return (
     <Button
-      className="p-2"
+      className="p-2 text-md font-semibold"
       radius="full"
       size="sm"
-      variant="bordered"
+      variant="faded"
       onPress={toggleLanguage}
     >
       {i18nextInstance.language === "en" ? "🇪🇸 ES" : "🇬🇧 EN"}
