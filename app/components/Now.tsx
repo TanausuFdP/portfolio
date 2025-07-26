@@ -14,7 +14,7 @@ export default function Now() {
         {t("now.title_third")}
       </h2>
       <div className="flex flex-wrap justify-center mt-8 gap-5">
-        <div className="border-[0.25rem] border-white shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[30px] overflow-hidden">
+        <div className="border-[0.25rem] border-white dark:border-zinc-700 shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[30px] overflow-hidden">
           <Card isFooterBlurred className="w-[530px] h-[256px] border-none">
             <Image
               alt="XCode"
@@ -24,14 +24,14 @@ export default function Now() {
               width="530"
             />
             <CardFooter className="justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-2 absolute before:rounded-xl rounded-2xl bottom-2 w-[calc(100%_-_24px)] shadow-small ml-3 z-10">
-              <p className="text-tiny text-foreground/80 text-center">
+              <p className="text-tiny text-black/60 text-center">
                 {t("now.descriptions.first")}
               </p>
             </CardFooter>
           </Card>
         </div>
 
-        <div className="border-[0.25rem] border-white shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[30px] overflow-hidden">
+        <div className="border-[0.25rem] border-white dark:border-zinc-700 shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[30px] overflow-hidden">
           <Card isFooterBlurred className="w-[256px] h-[256px] border-none">
             <Image
               alt="Piicate"
@@ -48,7 +48,7 @@ export default function Now() {
           </Card>
         </div>
 
-        <div className="border-[0.25rem] border-white shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[30px] overflow-hidden">
+        <div className="border-[0.25rem] border-white dark:border-zinc-700 shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[30px] overflow-hidden">
           <Card isFooterBlurred className="w-[256px] h-[256px] border-none">
             <Image
               alt="Sonia Abrante"
@@ -65,7 +65,7 @@ export default function Now() {
           </Card>
         </div>
 
-        <div className="border-[0.25rem] border-white shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[30px] overflow-hidden">
+        <div className="border-[0.25rem] border-white dark:border-zinc-700 shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[30px] overflow-hidden">
           <Card isFooterBlurred className="w-[256px] h-[256px] border-none">
             <Image
               alt="Calculator"
@@ -82,7 +82,7 @@ export default function Now() {
           </Card>
         </div>
 
-        <div className="border-[0.25rem] border-white shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[30px] overflow-hidden">
+        <div className="border-[0.25rem] border-white dark:border-zinc-700 shadow-[rgba(0,_0,_0,_0.1)_0px_0px_50px] rounded-[30px] overflow-hidden">
           <Card isFooterBlurred className="w-[256px] h-[256px] border-none">
             <Image
               alt="Book"
