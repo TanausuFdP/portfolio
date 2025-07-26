@@ -15,7 +15,7 @@ export default function Welcome() {
       <div className="font-semibold text-[2.5rem]">
         <div className="flex flex-wrap items-center gap-2">
           <span className="opacity-30">{t("welcome.first")}</span>
-          <div className="border-[0.2rem] border-white shadow-[rgba(0,_0,_0,_0.25)_0px_0px_30px] rounded-[22px] overflow-hidden">
+          <div className="border-[0.2rem] border-white dark:border-zinc-700 shadow-[rgba(0,_0,_0,_0.25)_0px_0px_30px] rounded-[22px] overflow-hidden">
             <div className="w-[56px] h-[56px]">
               <Image
                 alt="Profile photo"

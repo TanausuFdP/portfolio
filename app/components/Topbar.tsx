@@ -83,7 +83,7 @@ export default function Topbar() {
     >
       <NavbarBrand>
         <div className="flex gap-2 items-center">
-          <div className="border-[2px] border-white shadow-[rgba(0,_0,_0,_0.2)_0px_0px_20px] rounded-[13px] overflow-hidden">
+          <div className="border-[2px] border-white dark:border-zinc-700 shadow-[rgba(0,_0,_0,_0.2)_0px_0px_20px] rounded-[13px] overflow-hidden">
             <div className="w-[32px] h-[32px]">
               <Image
                 alt="Profile photo"

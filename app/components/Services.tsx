@@ -14,7 +14,7 @@ export default function Services() {
         <span className="text-primary">{t("services.title_second")}</span>
       </h2>
       <div className="flex justify-between mt-8">
-        <div className="border-[0.25rem] border-white rounded-[2rem] shadow-[rgba(0,_0,_0,_0.1)_0px_0px_40px] overflow-hidden">
+        <div className="border-[0.25rem] border-white dark:border-zinc-700 dark:bg-zinc-900 rounded-[2rem] shadow-[rgba(0,_0,_0,_0.1)_0px_0px_40px] overflow-hidden">
           <div className="w-[420px] h-[700px]">
             <div className="p-5">
               <div className="p-3 bg-primary w-min rounded-full mb-4 mt-5 mx-auto btn-shadow-primary">
@@ -29,7 +29,7 @@ export default function Services() {
 
                   return (
                     <div key={i} className="flex items-center gap-5">
-                      <div className="border-[0.2rem] border-white shadow-[rgba(0,_0,_0,_0.2)_0px_0px_20px] rounded-[20px] overflow-hidden">
+                      <div className="border-[0.2rem] border-white dark:border-zinc-700 shadow-[rgba(0,_0,_0,_0.2)_0px_0px_20px] rounded-[20px] overflow-hidden">
                         <div className="w-[56px] h-[56px]">
                           <Image
                             alt="Profile photo"
@@ -53,7 +53,7 @@ export default function Services() {
             </div>
           </div>
         </div>
-        <div className="border-[0.25rem] border-white rounded-[2rem] shadow-[rgba(0,_0,_0,_0.1)_0px_0px_40px] overflow-hidden">
+        <div className="border-[0.25rem] border-white dark:border-zinc-700  dark:bg-zinc-900 rounded-[2rem] shadow-[rgba(0,_0,_0,_0.1)_0px_0px_40px] overflow-hidden">
           <div className="w-[420px] h-[700px]">
             <div className="p-5">
               <div className="p-3 bg-primary w-min rounded-full mb-4 mt-5 mx-auto btn-shadow-primary">
@@ -68,7 +68,7 @@ export default function Services() {
 
                   return (
                     <div key={i} className="flex items-center gap-5">
-                      <div className="border-[0.2rem] border-white shadow-[rgba(0,_0,_0,_0.2)_0px_0px_20px] rounded-[20px] overflow-hidden">
+                      <div className="border-[0.2rem] border-white dark:border-zinc-700 shadow-[rgba(0,_0,_0,_0.2)_0px_0px_20px] rounded-[20px] overflow-hidden">
                         <div className="w-[56px] h-[56px]">
                           <Image
                             alt="Profile photo"
