@@ -9,18 +9,18 @@ export default function Services() {
 
   return (
     <div className="max-w-[56rem] mx-auto" id={t("topbar.third")}>
-      <h2 className="text-xl font-semibold text-center">
+      <h2 className="sm:text-xl font-semibold text-center">
         {t("services.title_first")}{" "}
         <span className="text-primary">{t("services.title_second")}</span>
       </h2>
-      <div className="flex justify-between mt-8">
+      <div className="flex flex-col sm:flex-row gap-5 sm:gap-0 justify-between mt-8">
         <div className="border-[0.25rem] border-white dark:border-zinc-700 dark:bg-zinc-900 rounded-[2rem] shadow-[rgba(0,_0,_0,_0.1)_0px_0px_40px] overflow-hidden">
-          <div className="w-[420px] h-[700px]">
+          <div className="w-full sm:w-[420px] sm:h-[700px]">
             <div className="p-5">
-              <div className="p-3 bg-primary w-min rounded-full mb-4 mt-5 mx-auto btn-shadow-primary">
-                <span className="text-6xl">🎨</span>
+              <div className="p-3 bg-primary w-14 flex items-center justify-center sm:w-min rounded-full mb-2 sm:mb-4 mt-5 mx-auto btn-shadow-primary">
+                <span className="text-2xl sm:text-6xl">🎨</span>
               </div>
-              <h3 className="text-center font-semibold text-xl">
+              <h3 className="text-center font-semibold sm:text-xl">
                 {t("services.frontend")}
               </h3>
               <div className="flex flex-col gap-3 mt-10">
@@ -30,7 +30,7 @@ export default function Services() {
                   return (
                     <div key={i} className="flex items-center gap-5">
                       <div className="border-[0.2rem] border-white dark:border-zinc-700 shadow-[rgba(0,_0,_0,_0.2)_0px_0px_20px] rounded-[20px] overflow-hidden">
-                        <div className="w-[56px] h-[56px]">
+                        <div className="w-[48px] h-[48px] sm:w-[56px] sm:h-[56px]">
                           <Image
                             alt="Profile photo"
                             height="56"
@@ -54,12 +54,12 @@ export default function Services() {
           </div>
         </div>
         <div className="border-[0.25rem] border-white dark:border-zinc-700  dark:bg-zinc-900 rounded-[2rem] shadow-[rgba(0,_0,_0,_0.1)_0px_0px_40px] overflow-hidden">
-          <div className="w-[420px] h-[700px]">
+          <div className="w-full sm:w-[420px] sm:h-[700px]">
             <div className="p-5">
-              <div className="p-3 bg-primary w-min rounded-full mb-4 mt-5 mx-auto btn-shadow-primary">
-                <span className="text-6xl">⚙️</span>
+              <div className="p-3 bg-primary w-14 flex items-center justify-center sm:w-min rounded-full mb-2 sm:mb-4 mt-5 mx-auto btn-shadow-primary">
+                <span className="text-2xl sm:text-6xl">⚙️</span>
               </div>
-              <h3 className="text-center font-semibold text-xl">
+              <h3 className="text-center font-semibold sm:text-xl">
                 {t("services.backend")}
               </h3>
               <div className="flex flex-col gap-3 mt-10">
@@ -69,7 +69,7 @@ export default function Services() {
                   return (
                     <div key={i} className="flex items-center gap-5">
                       <div className="border-[0.2rem] border-white dark:border-zinc-700 shadow-[rgba(0,_0,_0,_0.2)_0px_0px_20px] rounded-[20px] overflow-hidden">
-                        <div className="w-[56px] h-[56px]">
+                        <div className="w-[48px] h-[48px] sm:w-[56px] sm:h-[56px]">
                           <Image
                             alt="Profile photo"
                             height="56"
