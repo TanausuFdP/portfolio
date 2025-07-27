@@ -31,7 +31,7 @@ export default function Welcome() {
           <span className="ml-2">{t("welcome.fourth")}</span>
           <span className="opacity-30">{t("welcome.fifth")}</span>
           <span className="text-primary ml-2">{t("welcome.sixth")}</span>
-          <div className="pl-5 flex items-center pt-5 sm:pt-0">
+          <div className="sm:pl-5 flex items-center pt-5 sm:pt-0">
             <Chip
               color="success"
               size="lg"
