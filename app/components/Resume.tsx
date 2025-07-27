@@ -12,7 +12,7 @@ export default function Resume() {
           {t("resume.slogan")}
         </span>
       </div>
-      <div className="flex gap-20 justify-center items-center">
+      <div className="flex flex-wrap gap-20 justify-center items-center">
         <div className="flex flex-col justify-center items-center gap-5">
           <div className="w-20 h-20 bg-primary flex items-center justify-center rounded-full btn-shadow-primary">
             <span className="text-2xl font-bold text-white">

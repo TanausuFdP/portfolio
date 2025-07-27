@@ -20,7 +20,8 @@ export default function Home() {
       <Topbar />
       <AnimatedDecor />
       <div className="min-h-screen p-8 pb-20 gap-16 sm:p-20">
-        <Spacer y={44} />
+        <Spacer className="hidden sm:block" y={44} />
+        <Spacer className="sm:hidden" y={12} />
         <Welcome />
         <Spacer y={12} />
         <Entry />

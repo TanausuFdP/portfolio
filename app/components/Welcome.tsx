@@ -12,10 +12,10 @@ export default function Welcome() {
       } max-w-full mx-auto`}
       id={t("topbar.first")}
     >
-      <div className="font-semibold text-[2.5rem]">
-        <div className="flex flex-wrap items-center gap-2">
+      <div className="font-semibold text-[1.25rem] sm:text-[2.5rem]">
+        <div className="flex flex-wrap justify-center sm:justify-start items-center gap-1 sm:gap-2">
           <span className="opacity-30">{t("welcome.first")}</span>
-          <div className="border-[0.2rem] border-white dark:border-zinc-700 shadow-[rgba(0,_0,_0,_0.25)_0px_0px_30px] rounded-[22px] overflow-hidden">
+          <div className="border-[0.2rem] border-white dark:border-zinc-700 shadow-[rgba(0,_0,_0,_0.25)_0px_0px_30px] rounded-[22px] overflow-hidden hidden sm:block">
             <div className="w-[56px] h-[56px]">
               <Image
                 alt="Profile photo"
@@ -31,7 +31,7 @@ export default function Welcome() {
           <span className="ml-2">{t("welcome.fourth")}</span>
           <span className="opacity-30">{t("welcome.fifth")}</span>
           <span className="text-primary ml-2">{t("welcome.sixth")}</span>
-          <div className="pl-5 flex items-center">
+          <div className="pl-5 flex items-center pt-5 sm:pt-0">
             <Chip
               color="success"
               size="lg"

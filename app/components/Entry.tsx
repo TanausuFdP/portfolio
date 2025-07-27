@@ -41,9 +41,9 @@ export default function Entry() {
       <div
         className={`${
           i18nextInstance.language === "en" ? "w-[42rem]" : "w-[40rem]"
-        } max-w-full mx-auto flex items-center justify-between`}
+        } max-w-full mx-auto flex flex-col sm:flex-row items-center justify-between`}
       >
-        <div className="flex items-center gap-3">
+        <div className="flex flex-col sm:flex-row items-center gap-3">
           <span className="text-nowrap text-lg font-semibold">
             {t("entry.networks")}
           </span>
