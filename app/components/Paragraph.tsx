@@ -6,7 +6,7 @@ export default function Paragraph() {
 
   return (
     <div className="max-w-[56rem] mx-auto text-center">
-      <span className="opacity-50 font-[500] font-quicksand">
+      <span className="opacity-50 font-[500] font-quicksand text-tiny sm:text-medium">
         {t("services.paragraph")}
       </span>
     </div>

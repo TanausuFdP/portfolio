@@ -25,9 +25,11 @@ export default function Home() {
         <Welcome />
         <Spacer y={12} />
         <Entry />
-        <Spacer y={64} />
+        <Spacer className="hidden sm:block" y={64} />
+        <Spacer className="sm:hidden" y={40} />
         <Paragraph />
-        <Spacer y={64} />
+        <Spacer className="hidden sm:block" y={64} />
+        <Spacer className="sm:hidden" y={40} />
         <Now />
         <Spacer y={48} />
         <Services />
