@@ -25,7 +25,7 @@ export default function Bottombar() {
 
   return (
     <div
-      className={`fixed right-0 p-10 flex gap-3 z-20 transition-all duration-300 ${
+      className={`fixed right-0 p-5 sm:p-10 flex gap-2 sm:gap-3 z-20 transition-all duration-300 ${
         visible ? "bottom-0" : "-bottom-28"
       }`}
     >
