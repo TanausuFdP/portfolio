@@ -31,8 +31,25 @@ export default function Welcome() {
           <span className="ml-2">{t("welcome.fourth")}</span>
           <span className="opacity-30">{t("welcome.fifth")}</span>
           <span className="text-primary ml-2">{t("welcome.sixth")}</span>
-          <div className="sm:pl-5 flex items-center pt-5 sm:pt-0">
+          <div className="sm:pl-5 flex items-center pt-2 sm:pt-0">
             <Chip
+              className="sm:hidden"
+              color="success"
+              size="sm"
+              startContent={
+                <div className="mr-1">
+                  <span className="relative flex size-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-75" />
+                    <span className="relative inline-flex size-2 rounded-full bg-success" />
+                  </span>
+                </div>
+              }
+              variant="faded"
+            >
+              <span className="font-[500]">{t("welcome.open_to_work")}</span>
+            </Chip>
+            <Chip
+              className="hidden sm:flex"
               color="success"
               size="lg"
               startContent={
