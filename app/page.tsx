@@ -13,6 +13,7 @@ import Bottombar from "./components/Bottombar";
 import Career from "./components/Career";
 import AnimatedDecor from "./components/AnimatedDecor";
 import Paragraph from "./components/Paragraph";
+import End from "./components/End";
 
 export default function Home() {
   return (
@@ -37,6 +38,8 @@ export default function Home() {
         <Resume />
         <Spacer y={48} />
         <Career />
+        <Spacer y={64} />
+        <End />
       </div>
       <Bottombar />
     </div>
