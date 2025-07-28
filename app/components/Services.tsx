@@ -13,9 +13,9 @@ export default function Services() {
         {t("services.title_first")}{" "}
         <span className="text-primary">{t("services.title_second")}</span>
       </h2>
-      <div className="flex flex-col sm:flex-row gap-5 sm:gap-0 justify-between mt-8">
+      <div className="flex flex-col md:flex-row gap-5 md:gap-0 justify-between mt-8">
         <div className="border-[0.25rem] border-white dark:border-zinc-700 dark:bg-zinc-900 rounded-[2rem] shadow-[rgba(0,_0,_0,_0.1)_0px_0px_40px] overflow-hidden">
-          <div className="w-full sm:w-[420px] sm:h-[700px]">
+          <div className="w-full md:w-[420px] md:h-[700px]">
             <div className="p-5">
               <div className="p-3 bg-primary w-14 flex items-center justify-center sm:w-min rounded-full mb-2 sm:mb-4 mt-5 mx-auto btn-shadow-primary">
                 <span className="text-2xl sm:text-6xl">🎨</span>
@@ -30,7 +30,7 @@ export default function Services() {
                   return (
                     <div key={i} className="flex items-center gap-5">
                       <div className="border-[0.2rem] border-white dark:border-zinc-700 shadow-[rgba(0,_0,_0,_0.2)_0px_0px_20px] rounded-[20px] overflow-hidden">
-                        <div className="w-[48px] h-[48px] sm:w-[56px] sm:h-[56px]">
+                        <div className="w-[48px] h-[48px] md:w-[56px] md:h-[56px]">
                           <Image
                             alt="Profile photo"
                             height="56"
@@ -54,7 +54,7 @@ export default function Services() {
           </div>
         </div>
         <div className="border-[0.25rem] border-white dark:border-zinc-700  dark:bg-zinc-900 rounded-[2rem] shadow-[rgba(0,_0,_0,_0.1)_0px_0px_40px] overflow-hidden">
-          <div className="w-full sm:w-[420px] sm:h-[700px]">
+          <div className="w-full md:w-[420px] md:h-[700px]">
             <div className="p-5">
               <div className="p-3 bg-primary w-14 flex items-center justify-center sm:w-min rounded-full mb-2 sm:mb-4 mt-5 mx-auto btn-shadow-primary">
                 <span className="text-2xl sm:text-6xl">⚙️</span>
@@ -69,7 +69,7 @@ export default function Services() {
                   return (
                     <div key={i} className="flex items-center gap-5">
                       <div className="border-[0.2rem] border-white dark:border-zinc-700 shadow-[rgba(0,_0,_0,_0.2)_0px_0px_20px] rounded-[20px] overflow-hidden">
-                        <div className="w-[48px] h-[48px] sm:w-[56px] sm:h-[56px]">
+                        <div className="w-[48px] h-[48px] md:w-[56px] md:h-[56px]">
                           <Image
                             alt="Profile photo"
                             height="56"

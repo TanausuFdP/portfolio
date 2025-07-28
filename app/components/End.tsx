@@ -9,7 +9,7 @@ export default function End() {
       <div className="text-center flex justify-center w-full">
         <span className="font-semibold opacity-80">{t("general.email")}</span>
       </div>
-      <div className="hidden sm:block relative w-full h-36">
+      <div className="hidden md:block relative w-full h-36">
         <div className="absolute right-72 bottom-20 z-10 bg-primary animate-floatFirst w-4 h-4" />
         <div className="absolute -right-5 bottom-60 z-10 bg-primary animate-floatThird w-8 h-8" />
         <div className="absolute right-8 bottom-32 z-10 bg-primary animate-floatFifth w-12 h-12" />

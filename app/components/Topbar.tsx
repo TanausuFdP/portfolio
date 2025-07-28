@@ -76,7 +76,7 @@ export default function Topbar() {
   return (
     <>
       <Navbar
-        className="hidden sm:flex"
+        className="hidden md:flex"
         classNames={{ wrapper: "max-w-[1200px]" }}
         isBordered={topOffset === 0}
         shouldHideOnScroll={false}
@@ -92,11 +92,11 @@ export default function Topbar() {
           transition: "padding-top, width 0.3s ease",
         }}
       >
-        <NavbarContent className="sm:hidden" justify="start">
+        <NavbarContent className="md:hidden" justify="start">
           <NavbarMenuToggle />
         </NavbarContent>
 
-        <NavbarBrand className="hidden sm:flex">
+        <NavbarBrand className="hidden md:flex">
           <div className="flex gap-2 items-center">
             <div className="border-[2px] border-white dark:border-zinc-700 shadow-[rgba(0,_0,_0,_0.2)_0px_0px_20px] rounded-[13px] overflow-hidden">
               <div className="w-[32px] h-[32px]">
@@ -116,7 +116,7 @@ export default function Topbar() {
         </NavbarBrand>
 
         <NavbarContent
-          className="gap-6 font-quicksand hidden sm:flex"
+          className="gap-6 font-quicksand hidden md:flex"
           justify="center"
         >
           {[
@@ -165,12 +165,12 @@ export default function Topbar() {
         </NavbarContent>
       </Navbar>
 
-      <Navbar className="sm:hidden">
-        <NavbarContent className="sm:hidden" justify="start">
+      <Navbar isBordered className="md:hidden">
+        <NavbarContent className="md:hidden" justify="start">
           <NavbarMenuToggle />
         </NavbarContent>
 
-        <NavbarContent className="sm:hidden pr-3" justify="center">
+        <NavbarContent className="md:hidden pr-3" justify="center">
           <NavbarBrand>
             <p className="font-bold text-inherit text-lg">
               {t("general.name")}

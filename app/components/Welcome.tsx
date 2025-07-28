@@ -12,8 +12,19 @@ export default function Welcome() {
       } max-w-full mx-auto`}
       id={t("topbar.first")}
     >
+      <div className="border-[0.2rem] border-white dark:border-zinc-700 shadow-[rgba(0,_0,_0,_0.25)_0px_0px_30px] rounded-[22px] overflow-hidden sm:hidden w-fit mx-auto mb-3">
+        <div className="w-[48px] h-[48px]">
+          <Image
+            alt="Profile photo"
+            height="48"
+            radius="none"
+            src="/profile.jpeg"
+            width="48"
+          />
+        </div>
+      </div>
       <div className="font-semibold text-[1.25rem] sm:text-[2.5rem]">
-        <div className="flex flex-wrap justify-center sm:justify-start items-center gap-1 sm:gap-2">
+        <div className="flex flex-wrap justify-center md:justify-start items-center gap-1 sm:gap-2">
           <span className="opacity-30">{t("welcome.first")}</span>
           <div className="border-[0.2rem] border-white dark:border-zinc-700 shadow-[rgba(0,_0,_0,_0.25)_0px_0px_30px] rounded-[22px] overflow-hidden hidden sm:block">
             <div className="w-[56px] h-[56px]">

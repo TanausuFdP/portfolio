@@ -54,16 +54,16 @@ export default function Entry() {
       <div
         className={`${
           i18nextInstance.language === "en" ? "w-[42rem]" : "w-[40rem]"
-        } max-w-full mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-0`}
+        } max-w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-3 md:gap-0`}
       >
-        <div className="flex flex-col sm:flex-row items-center gap-3">
+        <div className="flex flex-col md:flex-row items-center gap-3">
           <span className="text-nowrap text-lg font-semibold">
             {t("entry.networks")}
           </span>
-          <ArrowLongRightIcon className="w-7 h-7 animate-bounceRight hidden sm:block" />
+          <ArrowLongRightIcon className="w-7 h-7 animate-bounceRight hidden md:block" />
         </div>
         <Button
-          className="w-full sm:w-auto max-w-60"
+          className="w-full md:w-auto max-w-60"
           color="primary"
           radius="full"
           size="lg"
@@ -76,7 +76,7 @@ export default function Entry() {
           LinkedIn
         </Button>
         <Button
-          className="w-full sm:w-auto max-w-60"
+          className="w-full md:w-auto max-w-60"
           color="primary"
           radius="full"
           size="lg"
@@ -87,7 +87,7 @@ export default function Entry() {
           GitHub
         </Button>
         <Button
-          className="w-full sm:w-auto max-w-60"
+          className="w-full md:w-auto max-w-60"
           color="primary"
           radius="full"
           size="lg"
