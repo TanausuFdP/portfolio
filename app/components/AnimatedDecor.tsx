@@ -22,7 +22,7 @@ export default function AnimatedDecor() {
   }, []);
 
   return (
-    <div>
+    <div className="hidden lg:block">
       <div className="fixed w-screen h-screen">
         <div
           className="relative w-full h-full"

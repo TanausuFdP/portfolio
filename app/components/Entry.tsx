@@ -18,8 +18,9 @@ export default function Entry() {
           i18nextInstance.language === "en" ? "w-[38rem]" : "w-[41rem]"
         } max-w-full mx-auto`}
       >
-        <div className="flex gap-5 items-center">
+        <div className="flex flex-col sm:flex-row gap-5 items-center justify-center">
           <Button
+            className="hidden sm:flex"
             color="primary"
             radius="full"
             size="lg"
@@ -31,7 +32,19 @@ export default function Entry() {
           >
             {t("entry.button")}
           </Button>
-          <div className="flex flex-col gap-1 font-quicksand">
+          <Button
+            className="sm:hidden"
+            color="primary"
+            radius="full"
+            startContent={<EnvelopeIcon className="w-5 h-5" />}
+            variant="shadow"
+            onPress={() =>
+              (window.location.href = `mailto:${t("general.email")}`)
+            }
+          >
+            {t("entry.button")}
+          </Button>
+          <div className="flex flex-col gap-1 font-quicksand text-center sm:text-left text-sm sm:text-medium opacity-60 sm:opacity-100">
             <span className="font-[500]">{t("entry.first")}</span>
             <span className="font-[500]">{t("entry.second")}</span>
           </div>
@@ -41,15 +54,16 @@ export default function Entry() {
       <div
         className={`${
           i18nextInstance.language === "en" ? "w-[42rem]" : "w-[40rem]"
-        } max-w-full mx-auto flex items-center justify-between`}
+        } max-w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-3 md:gap-0`}
       >
-        <div className="flex items-center gap-3">
+        <div className="flex flex-col md:flex-row items-center gap-3">
           <span className="text-nowrap text-lg font-semibold">
             {t("entry.networks")}
           </span>
-          <ArrowLongRightIcon className="w-7 h-7 animate-bounceRight" />
+          <ArrowLongRightIcon className="w-7 h-7 animate-bounceRight hidden md:block" />
         </div>
         <Button
+          className="w-full md:w-auto max-w-60"
           color="primary"
           radius="full"
           size="lg"
@@ -62,6 +76,7 @@ export default function Entry() {
           LinkedIn
         </Button>
         <Button
+          className="w-full md:w-auto max-w-60"
           color="primary"
           radius="full"
           size="lg"
@@ -72,6 +87,7 @@ export default function Entry() {
           GitHub
         </Button>
         <Button
+          className="w-full md:w-auto max-w-60"
           color="primary"
           radius="full"
           size="lg"
