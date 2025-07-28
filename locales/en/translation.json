@@ -1,3 +1,109 @@
 {
-  "welcome": "Welcome"
+  "general": {
+    "cv": "CV",
+    "name": "Tanausú",
+    "email": "tanausufdp@icloud.com",
+    "change_language": "Change language"
+  },
+  "career": {
+    "title_first": "My",
+    "title_second": "career",
+    "list": {
+      "1_title": "Bachelor's Degree in Computer Engineering",
+      "1_subtitle": "Universidad de Las Palmas de Gran Canaria | 2017 - 2021",
+      "2_title": "Game Developer",
+      "2_subtitle": "The Singular Factory | 2020 | Intern",
+      "3_title": "Frontend Developer",
+      "3_subtitle": "The Singular Factory | 2021 | Intern",
+      "4_title": "Full Stack Developer",
+      "4_subtitle": "Tiendas.com | 2021",
+      "5_title": "IT Technician",
+      "5_subtitle": "Cabildo de Gran Canaria | 2021 - 2022",
+      "6_title": "Full Stack Developer",
+      "6_subtitle": "Symbyosys IT Solutions | 2022 - 2025",
+      "7_title": "Full Stack Developer",
+      "7_subtitle": "Piicate | 2025 - Actualidad"
+    }
+  },
+  "entry": {
+    "button": "Contact me",
+    "first": "Feel free to explore my portfolio and see what I offer",
+    "second": "— I’d love to hear your thoughts!",
+    "networks": "My networks"
+  },
+  "now": {
+    "title_first": "What am I",
+    "title_second": "currently",
+    "title_third": "doing?",
+    "descriptions": {
+      "first": "Learning to program for iOS with Swift and Xcode",
+      "second": "Full web app built with Next.js",
+      "third": "Digital marketing for a personal trainer",
+      "fourth": "Mini-projects to showcase on my GitHub",
+      "fifth": "My own suspense novel"
+    }
+  },
+  "resume": {
+    "years_first": "4+",
+    "years_second": "Years of",
+    "years_third": "experience",
+    "projects_first": "6",
+    "projects_second": "Participated in",
+    "projects_third": "real-world projects",
+    "users_first": "∞",
+    "users_second": "Happy",
+    "users_third": "users",
+    "slogan": "«Make it simple or make it again.»"
+  },
+  "services": {
+    "title_first": "My",
+    "title_second": "services",
+    "paragraph": "«As a Full Stack Developer with a Computer Engineering degree from the University of Las Palmas de Gran Canaria, I enjoy building complete solutions — both server-side and client-side. Although I’m skilled across the stack, I’m especially passionate about Frontend development, where I can combine logic, design, and user experience.»",
+    "frontend": "Frontend Development",
+    "backend": "Backend Development",
+    "frontend_list": {
+      "1_name": "React",
+      "1_img": "react.png",
+      "2_name": "NodeJS",
+      "2_img": "NodeJS.png",
+      "3_name": "NextJS",
+      "3_img": "NextJS.jpeg",
+      "4_name": "Playwright",
+      "4_img": "Playwright.png",
+      "5_name": "Jest",
+      "5_img": "Jest.svg",
+      "6_name": "Vitest",
+      "6_img": "Vitest.jpg"
+    },
+    "backend_list": {
+      "1_name": "PHP",
+      "1_img": "PHP.jpg",
+      "2_name": "Java",
+      "2_img": "Java.png",
+      "3_name": "Sequelize",
+      "3_img": "Sequelize.png",
+      "4_name": "PostgreSQL",
+      "4_img": "PostgreSQL.png",
+      "5_name": "MySQL",
+      "5_img": "MySQL.avif",
+      "6_name": "MariaDB",
+      "6_img": "MariaDB.png"
+    }
+  },
+  "topbar": {
+    "first": "Home",
+    "second": "Now",
+    "third": "Services",
+    "fourth": "Career",
+    "fifth": "Projects"
+  },
+  "welcome": {
+    "first": "Hi! I'm",
+    "second": "Tanausú Fernández",
+    "third": "I'm a",
+    "fourth": "Full Stack Developer",
+    "fifth": "with",
+    "sixth": "4 years of experience.",
+    "open_to_work": "Open to work"
+  }
 }
