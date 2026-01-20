@@ -1,61 +1,146 @@
 "use client";
-import { ScrollShadow } from "@heroui/react";
-import { IconPointFilled } from "@tabler/icons-react";
-import { useEffect, useRef } from "react";
+
+import { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslation } from "react-i18next";
 
-export default function Career() {
-  const careers = 7;
+import CareerCard from "./CareerCard";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const CAREER_YEARS = [
+  { from: 2017, to: 2020 },
+  { from: 2020, to: 2021 },
+  { from: 2021, to: 2022 },
+  { from: 2023, to: 2024 },
+  { from: 2024, to: 2025 },
+  { from: 2025, to: 2026 },
+  { from: 2026, to: 2027 },
+];
+
+export default function CareerSection() {
   const { t } = useTranslation();
 
-  const bodyRef = useRef<HTMLDivElement | null>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<HTMLDivElement[]>([]);
+  const yearRef = useRef<HTMLSpanElement>(null);
 
-  useEffect(() => {
-    if (bodyRef.current) {
-      bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
-    }
-  });
+  const careers = CAREER_YEARS.length;
+
+  useLayoutEffect(() => {
+    if (!sectionRef.current || !yearRef.current) return;
+
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: `+=${(careers - 1) * 100}%`,
+          scrub: true,
+          onUpdate: (self) => {
+            const progress = self.progress;
+
+            const index = Math.min(careers - 1, Math.floor(progress * careers));
+
+            const { from, to } = CAREER_YEARS[index];
+
+            const localProgress = progress * careers - index;
+            const year = Math.round(from + (to - from) * localProgress);
+
+            yearRef.current!.textContent = year.toString();
+          },
+        },
+      });
+
+      cardsRef.current.forEach((card, index) => {
+        if (!card) return;
+
+        tl.fromTo(
+          card,
+          {
+            opacity: 0,
+            x: 200,
+            y: 200,
+            rotateX: -30,
+            rotateY: 30,
+            z: -200,
+          },
+          {
+            opacity: 1,
+            x: 0,
+            y: 0,
+            rotateX: 0,
+            rotateY: 0,
+            z: 0,
+            ease: "none",
+          },
+          index
+        );
+
+        tl.to(
+          card,
+          {
+            opacity: 0,
+            x: -200,
+            y: -200,
+            rotateX: 30,
+            rotateY: -30,
+            z: -200,
+            ease: "none",
+          },
+          index + 0.6
+        );
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, [careers]);
 
   return (
-    <div className="max-w-[48rem] mx-auto" id={t("topbar.fourth")}>
-      <div className="border-[0.25rem] border-white dark:border-zinc-700 dark:bg-zinc-900 rounded-[2rem] shadow-[rgba(0,_0,_0,_0.1)_0px_0px_40px] overflow-hidden">
-        <div className="w-full sm:w-[48rem] h-[400px] relative">
-          <div className="absolute top-5 left-5 font-semibold sm:text-xl px-3 py-2 rounded-full bg-white dark:bg-black z-10">
-            <span>{t("career.title_first")}</span>{" "}
-            <span className="text-primary">{t("career.title_second")}</span>
-          </div>
-          <ScrollShadow
-            ref={bodyRef}
-            hideScrollBar
-            className="w-full h-full pt-12"
+    <section
+      ref={sectionRef}
+      className="relative"
+      id={t("topbar.fourth")}
+      style={{ height: `${careers * 100}vh` }}
+    >
+      <div className="sticky top-0 h-screen overflow-hidden">
+        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none">
+          <span className="text-sm tracking-[0.3em] font-semibold uppercase text-foreground opacity-[0.1]">
+            mi trayectoria
+          </span>
+          <span
+            ref={yearRef}
+            className="text-[8rem] sm:text-[12rem] font-bold leading-none text-foreground opacity-[0.06]"
           >
-            <div className="p-5">
-              <div className="relative flex flex-col gap-8 mx-auto w-fit pl-3 sm:pl-6">
-                <div className="absolute left-[1.7rem] sm:left-[2.425rem] top-4 bottom-4 w-[2px] bg-gray-500" />
-                {[...Array(careers)].map((_, i) => {
-                  const n = i + 1;
+            2017
+          </span>
+        </div>
 
-                  return (
-                    <div key={i} className="flex items-center gap-3">
-                      <div className="relative z-10">
-                        <IconPointFilled className="w-8 h-8" />
-                      </div>
-                      <div className="flex flex-col leading-none">
-                        <span className="text-sm sm:text-lg font-semibold">
-                          {t("career.list." + n + "_title")}
-                        </span>
-                        <span className="text-tiny sm:text-medium opacity-50">
-                          {t("career.list." + n + "_subtitle")}
-                        </span>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
+        <div
+          className="relative h-full w-full flex items-center justify-center"
+          style={{
+            perspective: "1200px",
+            transformStyle: "preserve-3d",
+          }}
+        >
+          {Array.from({ length: careers }).map((_, i) => (
+            <div
+              key={i}
+              ref={(el) => {
+                if (el) cardsRef.current[i] = el;
+              }}
+              className="absolute"
+              style={{ transformStyle: "preserve-3d" }}
+            >
+              <CareerCard
+                subtitle={t(`career.list.${i + 1}_subtitle`)}
+                title={t(`career.list.${i + 1}_title`)}
+              />
             </div>
-          </ScrollShadow>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

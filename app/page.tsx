@@ -29,9 +29,11 @@ export default function Home() {
         <Spacer className="hidden sm:block" y={64} />
         <Spacer className="sm:hidden" y={40} />
         <Resume />
-        <Spacer y={48} />
+        <Spacer className="hidden sm:block" y={64} />
+        <Spacer className="sm:hidden" y={40} />
         <Career />
-        <Spacer y={64} />
+        <Spacer className="hidden sm:block" y={64} />
+        <Spacer className="sm:hidden" y={40} />
         <End />
       </div>
       <Bottombar />
