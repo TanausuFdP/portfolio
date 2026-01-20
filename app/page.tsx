@@ -12,6 +12,7 @@ import End from "./components/End";
 import HeroVideoBackground from "./components/HeroVideoBackground";
 import ProjectsSection from "./components/ProjectsSection";
 import AboutSection from "./components/AboutSection";
+import WhereToFindMe from "./components/WhereToFindMe";
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
       <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <Welcome />
       </div>
-      <div className="min-h-screen p-8 pb-20 gap-16 sm:p-20">
+      <div className="min-h-screen gap-16">
         <ProjectsSection />
         <Spacer className="hidden sm:block" y={64} />
         <Spacer className="sm:hidden" y={40} />
@@ -32,6 +33,9 @@ export default function Home() {
         <Spacer className="hidden sm:block" y={64} />
         <Spacer className="sm:hidden" y={40} />
         <Career />
+        <Spacer className="hidden sm:block" y={64} />
+        <Spacer className="sm:hidden" y={40} />
+        <WhereToFindMe />
         <Spacer className="hidden sm:block" y={64} />
         <Spacer className="sm:hidden" y={40} />
         <End />
