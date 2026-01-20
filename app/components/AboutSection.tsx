@@ -1,14 +1,12 @@
-"use client";
+'use client'
 
-import { Image } from "@heroui/react";
+import { Image } from '@heroui/react'
 
 export default function AboutSection() {
   return (
     <>
       <div className="p-8 pb-20 sm:p-20 flex flex-col justify-center">
-        <h2 className="text-lg font-bold text-center uppercase mb-4">
-          About Me
-        </h2>
+        <h2 className="text-lg font-bold text-center uppercase mb-4">About Me</h2>
 
         <div className="flex flex-col gap-2">
           <h3 className="text-center text-[5rem] uppercase font-bold leading-none">
@@ -44,32 +42,24 @@ export default function AboutSection() {
         />
         <div className="max-w-3xl mx-auto flex flex-col gap-8">
           <p className="text-xl sm:text-2xl leading-relaxed text-foreground/80">
-            My name is{" "}
-            <span className="font-semibold text-foreground">
-              Tanausú Fernández
-            </span>
-            . Born in the{" "}
-            <span className="font-semibold text-foreground">
-              Canary Islands
-            </span>
-            , raised near the coast — between ocean winds, beaches and long
-            sunsets.
+            My name is <span className="font-semibold text-foreground">Tanausú Fernández</span>.
+            Born in the <span className="font-semibold text-foreground">Canary Islands</span>
+            , raised near the coast — between ocean winds, beaches and long sunsets.
             <br />
-            <br />I build software with a strong focus on clarity,
-            maintainability and people.
+            <br />I build software with a strong focus on clarity, maintainability and people.
           </p>
 
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              "Clean code",
-              "Scalable systems",
-              "Product-minded",
-              "Problem solver",
-              "Team-oriented",
-              "Performance-focused",
-              "UX-aware",
-              "Long-term thinking",
-            ].map((label) => (
+              'Clean code',
+              'Scalable systems',
+              'Product-minded',
+              'Problem solver',
+              'Team-oriented',
+              'Performance-focused',
+              'UX-aware',
+              'Long-term thinking',
+            ].map(label => (
               <span
                 key={label}
                 className="px-4 py-2 text-sm uppercase tracking-wide
@@ -83,5 +73,5 @@ export default function AboutSection() {
         </div>
       </div>
     </>
-  );
+  )
 }

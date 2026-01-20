@@ -1,12 +1,12 @@
-"use client";
+'use client'
 
-import { useTranslation } from "react-i18next";
-import { Spacer } from "@heroui/react";
+import { useTranslation } from 'react-i18next'
+import { Spacer } from '@heroui/react'
 
-import AnimatedNumber from "./AnimatedNumber";
+import AnimatedNumber from './AnimatedNumber'
 
 export default function Resume() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <section className="relative py-32 overflow-hidden">
@@ -24,10 +24,10 @@ export default function Resume() {
             <AnimatedNumber value={5} />
             <Spacer y={6} />
             <span className="text-sm uppercase tracking-wide text-muted-foreground">
-              {t("resume.years_second")}
+              {t('resume.years_second')}
             </span>
             <span className="text-sm uppercase font-semibold text-muted-foreground">
-              {t("resume.years_third")}
+              {t('resume.years_third')}
             </span>
           </div>
 
@@ -35,10 +35,10 @@ export default function Resume() {
             <AnimatedNumber value={17} />
             <Spacer y={6} />
             <span className="text-sm uppercase tracking-wide text-muted-foreground">
-              {t("resume.projects_second")}
+              {t('resume.projects_second')}
             </span>
             <span className="text-sm uppercase font-semibold text-muted-foreground">
-              {t("resume.projects_third")}
+              {t('resume.projects_third')}
             </span>
           </div>
 
@@ -46,14 +46,14 @@ export default function Resume() {
             <AnimatedNumber value={49} />
             <Spacer y={6} />
             <span className="text-sm uppercase tracking-wide text-muted-foreground">
-              {t("resume.users_second")}
+              {t('resume.users_second')}
             </span>
             <span className="text-sm uppercase font-semibold text-muted-foreground">
-              {t("resume.users_third")}
+              {t('resume.users_third')}
             </span>
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }

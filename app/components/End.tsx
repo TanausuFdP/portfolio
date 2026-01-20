@@ -1,68 +1,62 @@
-"use client";
+'use client'
 
-import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef, useState } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
 
 export default function End() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const videoWrapperRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const videoWrapperRef = useRef<HTMLDivElement>(null)
 
-  const [showFooter, setShowFooter] = useState(false);
+  const [showFooter, setShowFooter] = useState(false)
 
   useEffect(() => {
-    if (!sectionRef.current || !videoWrapperRef.current) return;
+    if (!sectionRef.current || !videoWrapperRef.current) return
 
     const ctx = gsap.context(() => {
       gsap.fromTo(
         videoWrapperRef.current,
         {
-          width: "100vw",
-          height: "100vh",
-          borderRadius: "0rem",
+          width: '100vw',
+          height: '100vh',
+          borderRadius: '0rem',
         },
         {
-          width: "720px",
-          height: "300px",
-          borderRadius: "9999px",
-          ease: "none",
+          width: '720px',
+          height: '300px',
+          borderRadius: '9999px',
+          ease: 'none',
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top top",
-            end: "70% bottom",
+            start: 'top top',
+            end: '70% bottom',
             scrub: true,
           },
         }
-      );
-    }, sectionRef);
+      )
+    }, sectionRef)
 
-    return () => ctx.revert();
-  }, []);
+    return () => ctx.revert()
+  }, [])
 
   useEffect(() => {
     const onScroll = () => {
-      const threshold = 10;
-      const isBottom =
-        window.innerHeight + window.scrollY >=
-        document.body.scrollHeight - threshold;
+      const threshold = 10
+      const isBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight - threshold
 
-      setShowFooter(isBottom);
-    };
+      setShowFooter(isBottom)
+    }
 
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener('scroll', onScroll)
 
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   return (
     <>
-      <section
-        ref={sectionRef}
-        className="relative"
-        style={{ height: "220vh" }}
-      >
+      <section ref={sectionRef} className="relative" style={{ height: '220vh' }}>
         <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
           <div
             ref={videoWrapperRef}
@@ -93,11 +87,7 @@ export default function End() {
           pb-12 pt-4
           bg-background/80 backdrop-blur
           transition-all duration-500 ease-out
-          ${
-            showFooter
-              ? "translate-y-0 opacity-100"
-              : "translate-y-full opacity-0"
-          }
+          ${showFooter ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}
         `}
       >
         <div className="flex gap-6 uppercase font-bold text-lg">
@@ -132,5 +122,5 @@ export default function End() {
         </span>
       </footer>
     </>
-  );
+  )
 }

@@ -1,25 +1,25 @@
-"use client";
+'use client'
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
 export default function AnimatedDecor() {
-  const [scrollOffset, setScrollOffset] = useState(0);
+  const [scrollOffset, setScrollOffset] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const maxOffset = 400;
-      const offset = Math.min(scrollY, maxOffset);
+      const scrollY = window.scrollY
+      const maxOffset = 400
+      const offset = Math.min(scrollY, maxOffset)
 
-      setScrollOffset(offset);
-    };
+      setScrollOffset(offset)
+    }
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll, { passive: true })
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   return (
     <div className="hidden lg:block">
@@ -48,5 +48,5 @@ export default function AnimatedDecor() {
         </div>
       </div>
     </div>
-  );
+  )
 }

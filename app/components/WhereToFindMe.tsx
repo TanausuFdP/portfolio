@@ -1,14 +1,12 @@
-"use client";
+'use client'
 
-import SocialCard from "./SocialCard";
+import SocialCard from './SocialCard'
 
 export default function WhereToFindMe() {
   return (
     <section className="py-32 max-w-6xl mx-auto px-6">
       <div className="mb-20 text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-          Dónde encontrarme
-        </h2>
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Dónde encontrarme</h2>
         <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
           Estos son los espacios donde comparto mi trabajo, ideas y proyectos.
         </p>
@@ -27,12 +25,8 @@ export default function WhereToFindMe() {
           title="LinkedIn"
         />
 
-        <SocialCard
-          href="https://github.com/tuusuario"
-          image="/github.png"
-          title="GitHub"
-        />
+        <SocialCard href="https://github.com/tuusuario" image="/github.png" title="GitHub" />
       </div>
     </section>
-  );
+  )
 }

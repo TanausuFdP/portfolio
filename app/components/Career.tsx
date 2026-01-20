@@ -1,13 +1,13 @@
-"use client";
+'use client'
 
-import { useLayoutEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useTranslation } from "react-i18next";
+import { useLayoutEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useTranslation } from 'react-i18next'
 
-import CareerCard from "./CareerCard";
+import CareerCard from './CareerCard'
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
 
 const CAREER_YEARS = [
   { from: 2017, to: 2020 },
@@ -17,44 +17,44 @@ const CAREER_YEARS = [
   { from: 2024, to: 2025 },
   { from: 2025, to: 2026 },
   { from: 2026, to: 2027 },
-];
+]
 
 export default function CareerSection() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<HTMLDivElement[]>([]);
-  const yearRef = useRef<HTMLSpanElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const cardsRef = useRef<HTMLDivElement[]>([])
+  const yearRef = useRef<HTMLSpanElement>(null)
 
-  const careers = CAREER_YEARS.length;
+  const careers = CAREER_YEARS.length
 
   useLayoutEffect(() => {
-    if (!sectionRef.current || !yearRef.current) return;
+    if (!sectionRef.current || !yearRef.current) return
 
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top top",
+          start: 'top top',
           end: `+=${(careers - 1) * 100}%`,
           scrub: true,
-          onUpdate: (self) => {
-            const progress = self.progress;
+          onUpdate: self => {
+            const progress = self.progress
 
-            const index = Math.min(careers - 1, Math.floor(progress * careers));
+            const index = Math.min(careers - 1, Math.floor(progress * careers))
 
-            const { from, to } = CAREER_YEARS[index];
+            const { from, to } = CAREER_YEARS[index]
 
-            const localProgress = progress * careers - index;
-            const year = Math.round(from + (to - from) * localProgress);
+            const localProgress = progress * careers - index
+            const year = Math.round(from + (to - from) * localProgress)
 
-            yearRef.current!.textContent = year.toString();
+            yearRef.current!.textContent = year.toString()
           },
         },
-      });
+      })
 
       cardsRef.current.forEach((card, index) => {
-        if (!card) return;
+        if (!card) return
 
         tl.fromTo(
           card,
@@ -73,10 +73,10 @@ export default function CareerSection() {
             rotateX: 0,
             rotateY: 0,
             z: 0,
-            ease: "none",
+            ease: 'none',
           },
           index
-        );
+        )
 
         tl.to(
           card,
@@ -87,21 +87,21 @@ export default function CareerSection() {
             rotateX: 30,
             rotateY: -30,
             z: -200,
-            ease: "none",
+            ease: 'none',
           },
           index + 0.6
-        );
-      });
-    }, sectionRef);
+        )
+      })
+    }, sectionRef)
 
-    return () => ctx.revert();
-  }, [careers]);
+    return () => ctx.revert()
+  }, [careers])
 
   return (
     <section
       ref={sectionRef}
       className="relative"
-      id={t("topbar.fourth")}
+      id={t('topbar.fourth')}
       style={{ height: `${careers * 100}vh` }}
     >
       <div className="sticky top-0 h-screen overflow-hidden">
@@ -120,18 +120,18 @@ export default function CareerSection() {
         <div
           className="relative h-full w-full flex items-center justify-center"
           style={{
-            perspective: "1200px",
-            transformStyle: "preserve-3d",
+            perspective: '1200px',
+            transformStyle: 'preserve-3d',
           }}
         >
           {Array.from({ length: careers }).map((_, i) => (
             <div
               key={i}
-              ref={(el) => {
-                if (el) cardsRef.current[i] = el;
+              ref={el => {
+                if (el) cardsRef.current[i] = el
               }}
               className="absolute"
-              style={{ transformStyle: "preserve-3d" }}
+              style={{ transformStyle: 'preserve-3d' }}
             >
               <CareerCard
                 subtitle={t(`career.list.${i + 1}_subtitle`)}
@@ -142,5 +142,5 @@ export default function CareerSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

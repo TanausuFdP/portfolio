@@ -12,5 +12,5 @@ export default function HeroVideoBackground() {
       </video>
       <div className="absolute bottom-0 w-full h-64 bg-gradient-to-b from-transparent to-background" />
     </div>
-  );
+  )
 }

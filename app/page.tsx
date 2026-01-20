@@ -1,18 +1,18 @@
-"use client";
+'use client'
 
-import "@/i18n";
-import { Spacer } from "@heroui/react";
+import '@/i18n'
+import { Spacer } from '@heroui/react'
 
-import Welcome from "./components/Welcome";
-import Resume from "./components/Resume";
-import Topbar from "./components/Topbar";
-import Bottombar from "./components/Bottombar";
-import Career from "./components/Career";
-import End from "./components/End";
-import HeroVideoBackground from "./components/HeroVideoBackground";
-import ProjectsSection from "./components/ProjectsSection";
-import AboutSection from "./components/AboutSection";
-import WhereToFindMe from "./components/WhereToFindMe";
+import Welcome from './components/Welcome'
+import Resume from './components/Resume'
+import Topbar from './components/Topbar'
+import Bottombar from './components/Bottombar'
+import Career from './components/Career'
+import End from './components/End'
+import HeroVideoBackground from './components/HeroVideoBackground'
+import ProjectsSection from './components/ProjectsSection'
+import AboutSection from './components/AboutSection'
+import WhereToFindMe from './components/WhereToFindMe'
 
 export default function Home() {
   return (
@@ -42,5 +42,5 @@ export default function Home() {
       </div>
       <Bottombar />
     </div>
-  );
+  )
 }

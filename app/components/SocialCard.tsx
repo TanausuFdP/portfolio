@@ -1,10 +1,10 @@
-"use client";
+'use client'
 
 type SocialCardProps = {
-  title: string;
-  image: string;
-  href: string;
-};
+  title: string
+  image: string
+  href: string
+}
 
 export default function SocialCard({ title, image, href }: SocialCardProps) {
   return (
@@ -28,5 +28,5 @@ export default function SocialCard({ title, image, href }: SocialCardProps) {
         </span>
       </div>
     </a>
-  );
+  )
 }

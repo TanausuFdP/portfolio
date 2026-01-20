@@ -1,32 +1,32 @@
-"use client";
-import { EnvelopeIcon } from "@heroicons/react/24/solid";
-import { Button } from "@heroui/react";
+'use client'
+import { EnvelopeIcon } from '@heroicons/react/24/solid'
+import { Button } from '@heroui/react'
 import {
   IconBrandLinkedinFilled,
   IconBrandGithubFilled,
   IconBrandThreads,
-} from "@tabler/icons-react";
-import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+} from '@tabler/icons-react'
+import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export default function Bottombar() {
-  const { t } = useTranslation();
-  const [visible, setVisible] = useState(false);
+  const { t } = useTranslation()
+  const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setVisible(window.scrollY > 750);
-    };
+      setVisible(window.scrollY > 750)
+    }
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll, { passive: true })
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <div
       className={`fixed right-0 p-5 sm:p-10 flex gap-2 sm:gap-3 z-20 transition-all duration-300 ${
-        visible ? "bottom-0" : "-bottom-28"
+        visible ? 'bottom-0' : '-bottom-28'
       }`}
     >
       <Button
@@ -34,7 +34,7 @@ export default function Bottombar() {
         color="primary"
         radius="full"
         startContent={<EnvelopeIcon className="w-5 h-5" />}
-        onPress={() => (window.location.href = `mailto:${t("general.email")}`)}
+        onPress={() => (window.location.href = `mailto:${t('general.email')}`)}
       />
       <Button
         isIconOnly
@@ -43,9 +43,7 @@ export default function Bottombar() {
         radius="full"
         startContent={<IconBrandLinkedinFilled className="w-5 h-5" />}
         variant="ghost"
-        onPress={() =>
-          window.open("https://www.linkedin.com/in/tanausufdp/", "_blank")
-        }
+        onPress={() => window.open('https://www.linkedin.com/in/tanausufdp/', '_blank')}
       />
       <Button
         isIconOnly
@@ -54,7 +52,7 @@ export default function Bottombar() {
         radius="full"
         startContent={<IconBrandGithubFilled className="w-5 h-5" />}
         variant="ghost"
-        onPress={() => window.open("https://github.com/TanausuFdP", "_blank")}
+        onPress={() => window.open('https://github.com/TanausuFdP', '_blank')}
       />
       <Button
         isIconOnly
@@ -63,10 +61,8 @@ export default function Bottombar() {
         radius="full"
         startContent={<IconBrandThreads className="w-5 h-5" />}
         variant="ghost"
-        onPress={() =>
-          window.open("https://www.threads.com/@tanausu.js", "_blank")
-        }
+        onPress={() => window.open('https://www.threads.com/@tanausu.js', '_blank')}
       />
     </div>
-  );
+  )
 }
