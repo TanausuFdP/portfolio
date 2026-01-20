@@ -4,14 +4,10 @@ import "@/i18n";
 import { Spacer } from "@heroui/react";
 
 import Welcome from "./components/Welcome";
-import Entry from "./components/Entry";
-import Now from "./components/Now";
-import Services from "./components/Services";
 import Resume from "./components/Resume";
 import Topbar from "./components/Topbar";
 import Bottombar from "./components/Bottombar";
 import Career from "./components/Career";
-import Paragraph from "./components/Paragraph";
 import End from "./components/End";
 import HeroVideoBackground from "./components/HeroVideoBackground";
 import ProjectsSection from "./components/ProjectsSection";
@@ -32,16 +28,6 @@ export default function Home() {
         <AboutSection />
         <Spacer className="hidden sm:block" y={64} />
         <Spacer className="sm:hidden" y={40} />
-        <Entry />
-        <Spacer className="hidden sm:block" y={64} />
-        <Spacer className="sm:hidden" y={40} />
-        <Paragraph />
-        <Spacer className="hidden sm:block" y={64} />
-        <Spacer className="sm:hidden" y={40} />
-        <Now />
-        <Spacer y={48} />
-        <Services />
-        <Spacer y={48} />
         <Resume />
         <Spacer y={48} />
         <Career />

@@ -32,7 +32,7 @@ export default function AboutSection() {
           </h3>
         </div>
       </div>
-      <div className="flex gap-16 items-center px-20 mx-auto max-w-5xl">
+      <div className="flex gap-16 items-center mx-auto max-w-5xl">
         <Image
           isBlurred
           isZoomed
@@ -42,7 +42,7 @@ export default function AboutSection() {
           src="/profile.png"
           width="480"
         />
-        <div className="max-w-3xl mx-auto mt-16 flex flex-col gap-8">
+        <div className="max-w-3xl mx-auto flex flex-col gap-8">
           <p className="text-xl sm:text-2xl leading-relaxed text-foreground/80">
             My name is{" "}
             <span className="font-semibold text-foreground">
