@@ -72,7 +72,6 @@ const config = {
       },
     },
   },
-  darkMode: "class",
   plugins: [
     heroui({
       themes: {
@@ -83,7 +82,7 @@ const config = {
         },
         dark: {
           colors: {
-            background: "#000000",
+            background: "#F9F9F9",
           },
         },
       },

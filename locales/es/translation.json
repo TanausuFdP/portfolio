@@ -1,7 +1,7 @@
 {
   "general": {
     "cv": "CV",
-    "name": "Tanausú",
+    "name": "TANA.",
     "email": "tanausufdp@icloud.com",
     "change_language": "Cambiar idioma"
   },
@@ -91,19 +91,14 @@
     }
   },
   "topbar": {
-    "first": "Inicio",
-    "second": "Actualidad",
-    "third": "Servicios",
-    "fourth": "Trayectoria",
-    "fifth": "Proyectos"
+    "first": "Proyectos",
+    "second": "Sobre mí",
+    "third": "Contrátame"
   },
   "welcome": {
-    "first": "¡Hola! Soy",
-    "second": "Tanausú Fernández",
-    "third": "Soy",
-    "fourth": "Desarrollador Full Stack",
-    "fifth": "con",
-    "sixth": "4 años de experiencia.",
-    "open_to_work": "Open to work"
+    "first": "Tanausú Fernández",
+    "second": "Construyo soluciones",
+    "third": "digitales completas",
+    "download_button": "Descargar CV"
   }
 }

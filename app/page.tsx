@@ -11,20 +11,19 @@ import Resume from "./components/Resume";
 import Topbar from "./components/Topbar";
 import Bottombar from "./components/Bottombar";
 import Career from "./components/Career";
-import AnimatedDecor from "./components/AnimatedDecor";
 import Paragraph from "./components/Paragraph";
 import End from "./components/End";
+import HeroVideoBackground from "./components/HeroVideoBackground";
 
 export default function Home() {
   return (
     <div className="font-[family-name:var(--font-poppins)]">
       <Topbar />
-      <AnimatedDecor />
-      <div className="min-h-screen p-8 pb-20 gap-16 sm:p-20">
-        <Spacer className="hidden sm:block" y={44} />
-        <Spacer className="sm:hidden" y={12} />
+      <HeroVideoBackground />
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <Welcome />
-        <Spacer y={12} />
+      </div>
+      <div className="min-h-screen p-8 pb-20 gap-16 sm:p-20">
         <Entry />
         <Spacer className="hidden sm:block" y={64} />
         <Spacer className="sm:hidden" y={40} />
