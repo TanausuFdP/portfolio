@@ -14,6 +14,8 @@ import Career from "./components/Career";
 import Paragraph from "./components/Paragraph";
 import End from "./components/End";
 import HeroVideoBackground from "./components/HeroVideoBackground";
+import ProjectsSection from "./components/ProjectsSection";
+import AboutSection from "./components/AboutSection";
 
 export default function Home() {
   return (
@@ -24,6 +26,12 @@ export default function Home() {
         <Welcome />
       </div>
       <div className="min-h-screen p-8 pb-20 gap-16 sm:p-20">
+        <ProjectsSection />
+        <Spacer className="hidden sm:block" y={64} />
+        <Spacer className="sm:hidden" y={40} />
+        <AboutSection />
+        <Spacer className="hidden sm:block" y={64} />
+        <Spacer className="sm:hidden" y={40} />
         <Entry />
         <Spacer className="hidden sm:block" y={64} />
         <Spacer className="sm:hidden" y={40} />

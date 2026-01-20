@@ -5,6 +5,20 @@
     "email": "tanausufdp@icloud.com",
     "change_language": "Cambiar idioma"
   },
+  "topbar": {
+    "first": "Proyectos",
+    "second": "Sobre mí",
+    "third": "Contrátame"
+  },
+  "welcome": {
+    "first": "Tanausú Fernández",
+    "second": "Construyo soluciones",
+    "third": "digitales completas",
+    "download_button": "Descargar CV"
+  },
+  "projects": {
+    "view_project": "Ver proyecto"
+  },
   "career": {
     "title_first": "Mi",
     "title_second": "trayectoria",
@@ -89,16 +103,5 @@
       "6_name": "MariaDB",
       "6_img": "MariaDB.png"
     }
-  },
-  "topbar": {
-    "first": "Proyectos",
-    "second": "Sobre mí",
-    "third": "Contrátame"
-  },
-  "welcome": {
-    "first": "Tanausú Fernández",
-    "second": "Construyo soluciones",
-    "third": "digitales completas",
-    "download_button": "Descargar CV"
   }
 }
