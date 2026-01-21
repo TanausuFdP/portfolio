@@ -19,7 +19,34 @@
     "continue_hint": "¡Descubre más abajo!"
   },
   "projects": {
-    "view_project": "Ver proyecto"
+    "background_title": "Mis proyectos",
+    "view_project": "Ver proyecto",
+    "items": {
+      "project1": {
+        "title": "Daisy",
+        "subtitle": "Gestor de reuniones diarias SCRUM."
+      },
+      "project2": {
+        "title": "Piicate",
+        "subtitle": "Red social con gamificación."
+      },
+      "project3": {
+        "title": "Trébol",
+        "subtitle": "App de comida a domicilio con gestión de repartos en tiempo real."
+      },
+      "project4": {
+        "title": "SGFactu NOW",
+        "subtitle": "Facturación y gestión empresarial con Veri*Factu."
+      },
+      "project5": {
+        "title": "SGTPV",
+        "subtitle": "TPV de venta al por mayor."
+      },
+      "project6": {
+        "title": "FitRoomLP",
+        "subtitle": "Landing page de un gimnasio local."
+      }
+    }
   },
   "career": {
     "title_first": "Mi",

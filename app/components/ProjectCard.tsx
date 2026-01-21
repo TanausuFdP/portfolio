@@ -1,21 +1,40 @@
+/* eslint-disable @next/next/no-img-element */
 import { useTranslation } from 'react-i18next'
 
 type ProjectCardProps = {
-  title: string
-  subtitle: string
+  titleKey: string
+  subtitleKey: string
+  image: string
+  url?: string
 }
 
-export default function ProjectCard({ title, subtitle }: ProjectCardProps) {
+export default function ProjectCard({ titleKey, subtitleKey, image, url }: ProjectCardProps) {
   const { t } = useTranslation()
 
   return (
-    <div className="w-[520px] rounded-2xl bg-white shadow-2xl p-8">
-      <h3 className="text-3xl font-bold">{title}</h3>
-      <p className="mt-2 text-gray-500">{subtitle}</p>
+    <div className="w-[640px] rounded-2xl overflow-hidden bg-background shadow-2xl">
+      <div className="relative h-[360px] w-full">
+        <img alt={t(titleKey)} className="h-full w-full object-cover" src={image} />
+      </div>
 
-      <button className="mt-6 rounded-full bg-black px-6 py-3 text-white">
-        {t('projects.view_project')}
-      </button>
+      <div className="p-8 flex items-center justify-between gap-6">
+        <div>
+          <h3 className="text-2xl font-bold uppercase tracking-tight">{t(titleKey)}</h3>
+          <p className="mt-1 text-muted-foreground">{t(subtitleKey)}</p>
+        </div>
+
+        <button
+          className={`shrink-0 rounded-lg bg-black px-6 py-3 text-sm font-semibold text-white uppercase ${!url ? 'opacity-30 cursor-not-allowed' : 'hover:bg-gray-800'}`}
+          disabled={!url}
+          onClick={() => {
+            if (url) {
+              window.open(url, '_blank')
+            }
+          }}
+        >
+          {t('projects.view_project')}
+        </button>
+      </div>
     </div>
   )
 }

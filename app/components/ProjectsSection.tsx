@@ -1,22 +1,55 @@
 'use client'
 
-import { useLayoutEffect, useRef } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { t } from 'i18next'
 
 import ProjectCard from './ProjectCard'
+import ProjectsMarquee from './ProjectsMarquee'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const PROJECTS = [
-  { title: 'Parable', subtitle: 'Branding, design, development' },
-  { title: 'Loka', subtitle: 'Design, development' },
-  { title: 'DeepFlow', subtitle: 'Design, development' },
+  {
+    titleKey: 'projects.items.project1.title',
+    subtitleKey: 'projects.items.project1.subtitle',
+    image: '/projects/project1.png',
+  },
+  {
+    titleKey: 'projects.items.project2.title',
+    subtitleKey: 'projects.items.project2.subtitle',
+    image: '/projects/project2.png',
+  },
+  {
+    titleKey: 'projects.items.project3.title',
+    subtitleKey: 'projects.items.project3.subtitle',
+    image: '/projects/project3.png',
+  },
+  {
+    titleKey: 'projects.items.project4.title',
+    subtitleKey: 'projects.items.project4.subtitle',
+    image: '/projects/project4.png',
+  },
+  {
+    titleKey: 'projects.items.project5.title',
+    subtitleKey: 'projects.items.project5.subtitle',
+    image: '/projects/project5.png',
+  },
+  {
+    titleKey: 'projects.items.project6.title',
+    subtitleKey: 'projects.items.project6.subtitle',
+    image: '/projects/project6.png',
+    url: 'https://www.fitroomlp.es',
+  },
 ]
 
 export default function ProjectsSection() {
+  const [activeIndex, setActiveIndex] = useState(0)
+
   const sectionRef = useRef<HTMLDivElement>(null)
   const cardsRef = useRef<HTMLDivElement[]>([])
+  const lastIndex = useRef(0)
 
   useLayoutEffect(() => {
     if (!sectionRef.current) return
@@ -31,15 +64,36 @@ export default function ProjectsSection() {
         },
       })
 
+      const safeSetIndex = (index: number) => {
+        if (lastIndex.current !== index) {
+          lastIndex.current = index
+          setActiveIndex(index)
+        }
+      }
+
       PROJECTS.forEach((_, index) => {
         const current = cardsRef.current[index]
         const next = cardsRef.current[index + 1]
 
         if (!current || !next) return
 
-        tl.to(current, { rotateX: -90, ease: 'none' }, '+=1').to(
+        tl.to(current, {
+          rotateX: -90,
+          ease: 'none',
+        })
+
+        tl.to(
           next,
-          { rotateX: 0, ease: 'none' },
+          {
+            rotateX: 0,
+            ease: 'none',
+            onComplete: () => {
+              safeSetIndex(index + 1)
+            },
+            onReverseComplete: () => {
+              safeSetIndex(index)
+            },
+          },
           '<'
         )
       })
@@ -49,12 +103,10 @@ export default function ProjectsSection() {
   }, [])
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative bg-neutral-100"
-      style={{ height: `${PROJECTS.length * 100}vh` }}
-    >
+    <section ref={sectionRef} className="relative" style={{ height: `${PROJECTS.length * 100}vh` }}>
       <div className="sticky top-0 h-screen overflow-hidden">
+        <ProjectsMarquee currentProject={t(PROJECTS[activeIndex].titleKey)} />
+
         <div
           className="relative h-full w-full"
           style={{
@@ -64,7 +116,7 @@ export default function ProjectsSection() {
         >
           {PROJECTS.map((project, index) => (
             <div
-              key={project.title}
+              key={project.titleKey}
               ref={el => {
                 if (el) cardsRef.current[index] = el
               }}
@@ -74,7 +126,12 @@ export default function ProjectsSection() {
                 transformOrigin: 'center bottom',
               }}
             >
-              <ProjectCard subtitle={project.subtitle} title={project.title} />
+              <ProjectCard
+                image={project.image}
+                subtitleKey={project.subtitleKey}
+                titleKey={project.titleKey}
+                url={project.url}
+              />
             </div>
           ))}
         </div>
