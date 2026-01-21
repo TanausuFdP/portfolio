@@ -2,8 +2,9 @@
   "general": {
     "cv": "CV",
     "name": "TANA.",
+    "contact": "Contáctame",
     "email": "tanausufdp@icloud.com",
-    "change_language": "Cambiar idioma"
+    "change_language": "🇬🇧 English"
   },
   "topbar": {
     "first": "Proyectos",
@@ -14,7 +15,8 @@
     "first": "Tanausú Fernández",
     "second": "Construyo soluciones",
     "third": "digitales completas",
-    "download_button": "Descargar CV"
+    "download_button": "Descargar CV",
+    "continue_hint": "¡Descubre más abajo!"
   },
   "projects": {
     "view_project": "Ver proyecto"

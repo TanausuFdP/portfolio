@@ -19,9 +19,7 @@ export default function Home() {
     <div className="font-[family-name:var(--font-poppins)]">
       <Topbar />
       <HeroVideoBackground />
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <Welcome />
-      </div>
+      <Welcome />
       <div className="min-h-screen gap-16">
         <ProjectsSection />
         <Spacer className="hidden sm:block" y={64} />
