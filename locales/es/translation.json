@@ -48,6 +48,29 @@
       }
     }
   },
+  "about": {
+    "title": "About me",
+    "slogan": "Make it simple or make it again.",
+    "roles": {
+      "first": "Full-stack developer.",
+      "second": "Project manager.",
+      "third": "Software engineer.",
+      "fourth": "Videogames, films &",
+      "fifth": "music lover."
+    },
+    "description1": "My name is Tanausú Fernández. Born in the Canary Islands, raised near the coast — between ocean winds, beaches and long sunsets.",
+    "description2": "I build software with a strong focus on clarity, maintainability and people.",
+    "profile_alt": "Profile picture",
+    "contact": "Send me an email",
+    "chips": {
+      "clean_code": "Clean code",
+      "scalable_systems": "Scalable systems",
+      "product_minded": "Product-minded",
+      "problem_solver": "Problem solver",
+      "team_oriented": "Team-oriented",
+      "ux_aware": "UX-aware"
+    }
+  },
   "career": {
     "title_first": "Mi",
     "title_second": "trayectoria",

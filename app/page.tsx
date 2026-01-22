@@ -20,19 +20,19 @@ export default function Home() {
       <Topbar />
       <HeroVideoBackground />
       <Welcome />
-      <div className="min-h-screen gap-16">
+      <div className="min-h-screen">
         <ProjectsSection />
-        <Spacer className="hidden sm:block" y={64} />
-        <Spacer className="sm:hidden" y={40} />
+        <Spacer className="hidden sm:block" y={12} />
+        <Spacer className="sm:hidden" y={4} />
         <AboutSection />
-        <Spacer className="hidden sm:block" y={64} />
-        <Spacer className="sm:hidden" y={40} />
+        <Spacer className="hidden sm:block" y={24} />
+        <Spacer className="sm:hidden" y={12} />
         <Resume />
-        <Spacer className="hidden sm:block" y={64} />
-        <Spacer className="sm:hidden" y={40} />
+        <Spacer className="hidden sm:block" y={24} />
+        <Spacer className="sm:hidden" y={12} />
         <Career />
-        <Spacer className="hidden sm:block" y={64} />
-        <Spacer className="sm:hidden" y={40} />
+        <Spacer className="hidden sm:block" y={24} />
+        <Spacer className="sm:hidden" y={12} />
         <WhereToFindMe />
         <Spacer className="hidden sm:block" y={64} />
         <Spacer className="sm:hidden" y={40} />

@@ -2,7 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn-shadow-primary {
-  box-shadow: 0 3px 14px 0
-    hsl(var(--heroui-primary) / var(--heroui-primary-opacity, var(--tw-bg-opacity)));
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(220px);
+  }
+  to {
+    transform: rotate(-360deg) translateX(220px);
+  }
+}
+
+.orbit-rocket {
+  animation: orbit 18s linear infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+}
+
+.animate-heartbeat {
+  animation: heartbeat 1.4s ease-in-out infinite;
+}
+
+@keyframes bounce-soft {
+  0%, 100% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(-70%);
+  }
+}
+
+.animate-bounce-soft {
+  animation: bounce-soft 2.8s ease-in-out infinite;
+}
+
+.drop-shadow-heart {
+  filter: drop-shadow(0 0 14px rgba(255, 95, 109, 0.6));
+}
+
+.drop-shadow-rocket {
+  filter: drop-shadow(0 0 12px rgba(129, 37, 235, 0.588));
 }
