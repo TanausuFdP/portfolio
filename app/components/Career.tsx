@@ -9,14 +9,32 @@ import CareerCard from './CareerCard'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const CAREER_YEARS = [
-  { from: 2017, to: 2020 },
-  { from: 2020, to: 2021 },
-  { from: 2021, to: 2022 },
-  { from: 2023, to: 2024 },
-  { from: 2024, to: 2025 },
-  { from: 2025, to: 2026 },
-  { from: 2026, to: 2027 },
+const CAREER_BLOCKS = [
+  {
+    from: 2016,
+    to: 2021,
+    items: [1, 2, 3],
+  },
+  {
+    from: 2021,
+    to: 2022,
+    items: [4, 5],
+  },
+  {
+    from: 2022,
+    to: 2025,
+    items: [6],
+  },
+  {
+    from: 2025,
+    to: 2025,
+    items: [7],
+  },
+  {
+    from: 2025,
+    to: 2026,
+    items: [8],
+  },
 ]
 
 export default function CareerSection() {
@@ -26,7 +44,8 @@ export default function CareerSection() {
   const cardsRef = useRef<HTMLDivElement[]>([])
   const yearRef = useRef<HTMLSpanElement>(null)
 
-  const careers = CAREER_YEARS.length
+  const careers = CAREER_BLOCKS.length
+  const totalSegments = careers - 1
 
   useLayoutEffect(() => {
     if (!sectionRef.current || !yearRef.current) return
@@ -36,16 +55,18 @@ export default function CareerSection() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
-          end: `+=${(careers - 1) * 100}%`,
+          end: `+=${totalSegments * 100}%`,
           scrub: true,
           onUpdate: self => {
             const progress = self.progress
 
-            const index = Math.min(careers - 1, Math.floor(progress * careers))
+            const segmentProgress = progress * totalSegments
+            const index = Math.min(CAREER_BLOCKS.length - 1, Math.floor(segmentProgress))
 
-            const { from, to } = CAREER_YEARS[index]
+            const { from, to } = CAREER_BLOCKS[index]
 
-            const localProgress = progress * careers - index
+            const localProgress = gsap.utils.clamp(0, 1, segmentProgress - index)
+
             const year = Math.round(from + (to - from) * localProgress)
 
             yearRef.current!.textContent = year.toString()
@@ -60,16 +81,16 @@ export default function CareerSection() {
           card,
           {
             opacity: 0,
-            x: 200,
-            y: 200,
-            rotateX: -30,
-            rotateY: 30,
-            z: -200,
+            x: '40vw',
+            y: '40vh',
+            rotateX: -25,
+            rotateY: 25,
+            z: -300,
           },
           {
             opacity: 1,
-            x: 0,
-            y: 0,
+            x: '0vw',
+            y: '0vh',
             rotateX: 0,
             rotateY: 0,
             z: 0,
@@ -82,20 +103,20 @@ export default function CareerSection() {
           card,
           {
             opacity: 0,
-            x: -200,
-            y: -200,
-            rotateX: 30,
-            rotateY: -30,
-            z: -200,
+            x: '-40vw',
+            y: '-40vh',
+            rotateX: 25,
+            rotateY: -25,
+            z: -300,
             ease: 'none',
           },
-          index + 0.6
+          index + 0.65
         )
       })
     }, sectionRef)
 
     return () => ctx.revert()
-  }, [careers])
+  }, [totalSegments])
 
   return (
     <section
@@ -113,7 +134,7 @@ export default function CareerSection() {
             ref={yearRef}
             className="text-[8rem] sm:text-[12rem] font-bold leading-none text-foreground opacity-[0.06]"
           >
-            2017
+            {CAREER_BLOCKS[0].from}
           </span>
         </div>
 
@@ -124,7 +145,7 @@ export default function CareerSection() {
             transformStyle: 'preserve-3d',
           }}
         >
-          {Array.from({ length: careers }).map((_, i) => (
+          {CAREER_BLOCKS.map((block, i) => (
             <div
               key={i}
               ref={el => {
@@ -134,8 +155,10 @@ export default function CareerSection() {
               style={{ transformStyle: 'preserve-3d' }}
             >
               <CareerCard
-                subtitle={t(`career.list.${i + 1}_subtitle`)}
-                title={t(`career.list.${i + 1}_title`)}
+                subtitles={block.items.map(
+                  idx => `${t(`career.list.${idx}_title`)} · ${t(`career.list.${idx}_subtitle`)}`
+                )}
+                title={`${t(`career.list.${block.items[0]}_years`)}`}
               />
             </div>
           ))}
