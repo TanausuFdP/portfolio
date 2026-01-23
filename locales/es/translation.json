@@ -6,6 +6,11 @@
     "email": "tanausufdp@icloud.com",
     "change_language": "🇬🇧 English"
   },
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/tanausufdp",
+    "github": "https://github.com/tanausufdp",
+    "threads": "https://www.threads.net/@tanausu.js"
+  },
   "topbar": {
     "first": "Proyectos",
     "second": "Sobre mí",
@@ -71,6 +76,14 @@
       "ux_aware": "UX-aware"
     }
   },
+  "resume": {
+    "years_second": "Años de",
+    "years_third": "experiencia",
+    "projects_second": "Involucrado en",
+    "projects_third": "proyectos reales",
+    "users_second": "Usuarios",
+    "users_third": "satisfechos"
+  },
   "career": {
     "title_first": "Mi",
     "title_second": "trayectoria",
@@ -99,12 +112,23 @@
       "8_years": "2025 - Presente"
     }
   },
-  "resume": {
-    "years_second": "Años de",
-    "years_third": "experiencia",
-    "projects_second": "Involucrado en",
-    "projects_third": "proyectos reales",
-    "users_second": "Usuarios",
-    "users_third": "satisfechos"
+  "where_to_find_me": {
+    "title": "Dónde encontrarme",
+    "description": "Estos son los espacios donde comparto mi trabajo, ideas y proyectos. ¡Conectemos!"
+  },
+  "end": {
+    "cta": {
+      "line1": "let’s build",
+      "line2": "something",
+      "line3": "meaningful"
+    },
+    "footer": {
+      "thanks": "Thanks for visiting!"
+    },
+    "links": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "threads": "Threads"
+    }
   }
 }

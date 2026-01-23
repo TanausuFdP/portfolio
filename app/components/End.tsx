@@ -3,17 +3,20 @@
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { t } from 'i18next'
+import { Spacer } from '@heroui/react'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function End() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const videoWrapperRef = useRef<HTMLDivElement>(null)
+  const textRef = useRef<HTMLDivElement>(null)
 
   const [showFooter, setShowFooter] = useState(false)
 
   useEffect(() => {
-    if (!sectionRef.current || !videoWrapperRef.current) return
+    if (!sectionRef.current || !videoWrapperRef.current || !textRef.current) return
 
     const ctx = gsap.context(() => {
       gsap.fromTo(
@@ -32,6 +35,26 @@ export default function End() {
             trigger: sectionRef.current,
             start: 'top top',
             end: '70% bottom',
+            scrub: true,
+          },
+        }
+      )
+
+      gsap.fromTo(
+        textRef.current?.children!,
+        {
+          opacity: 0,
+          y: 40,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.12,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top+=15% top',
+            end: 'top+=35% top',
             scrub: true,
           },
         }
@@ -71,10 +94,15 @@ export default function End() {
               src="/end.mp4"
             />
 
-            <div className="relative z-10 px-6 text-center">
-              <span className="text-white text-3xl sm:text-[4rem] font-bold tracking-wide uppercase leading-tight">
-                Let’s build something meaningful
-              </span>
+            <div
+              ref={textRef}
+              className="relative z-10 px-6 text-center text-white uppercase font-bold tracking-wide"
+            >
+              <span className="block text-3xl sm:text-[4rem]">{t('end.cta.line1')}</span>
+              <Spacer y={6} />
+              <span className="block text-3xl sm:text-[4rem]">{t('end.cta.line2')}</span>
+              <Spacer y={6} />
+              <span className="block text-3xl sm:text-[4rem]">{t('end.cta.line3')}</span>
             </div>
           </div>
         </div>
@@ -82,43 +110,41 @@ export default function End() {
 
       <footer
         className={`
-          fixed bottom-0 left-0 right-0 z-50
+          fixed bottom-8 left-1/2 -translate-x-1/2 z-50
           flex flex-col items-center gap-4
-          pb-12 pt-4
-          bg-background/80 backdrop-blur
           transition-all duration-500 ease-out
-          ${showFooter ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}
+          ${showFooter ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}
         `}
       >
         <div className="flex gap-6 uppercase font-bold text-lg">
           <a
             className="hover:text-foreground transition-colors"
-            href="https://www.linkedin.com/in/tuusuario"
+            href={t('links.linkedin')}
             rel="noopener noreferrer"
             target="_blank"
           >
-            LinkedIn
+            {t('end.links.linkedin')}
           </a>
           <a
             className="hover:text-foreground transition-colors"
-            href="https://github.com/tuusuario"
+            href={t('links.github')}
             rel="noopener noreferrer"
             target="_blank"
           >
-            GitHub
+            {t('end.links.github')}
           </a>
           <a
             className="hover:text-foreground transition-colors"
-            href="https://www.threads.net/@tuusuario"
+            href={t('links.threads')}
             rel="noopener noreferrer"
             target="_blank"
           >
-            Threads
+            {t('end.links.threads')}
           </a>
         </div>
 
-        <span className="opacity-65 font-semibold">
-          © {new Date().getFullYear()} Tana. Thanks for visiting!
+        <span className="opacity-60 font-semibold text-sm">
+          © {new Date().getFullYear()} Tana. {t('end.footer.thanks')}
         </span>
       </footer>
     </>
