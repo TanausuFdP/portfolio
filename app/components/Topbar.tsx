@@ -9,23 +9,28 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from '@heroui/navbar'
-import { Button, Link } from '@heroui/react'
+import { Button } from '@heroui/react'
+import { Link } from '@heroui/link'
 import { ArrowDownCircleIcon } from '@heroicons/react/24/outline'
 import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from 'react'
 
 import LanguageSwitcher from './LanguageSwitcher'
 
+const SECTIONS = [
+  { id: 'projects', label: 'topbar.first' },
+  { id: 'about', label: 'topbar.second' },
+  { id: 'experience', label: 'topbar.third' },
+]
+
 export default function Topbar() {
   const { t, i18n: i18nextInstance } = useTranslation()
   const [activeSection, setActiveSection] = useState<string | null>(null)
 
   useEffect(() => {
-    const sectionIds = [t('topbar.first'), t('topbar.second'), t('topbar.third')]
-
     const observers: IntersectionObserver[] = []
 
-    sectionIds.forEach(id => {
+    SECTIONS.forEach(({ id }) => {
       const element = document.getElementById(id)
 
       if (!element) return
@@ -36,21 +41,15 @@ export default function Topbar() {
             setActiveSection(id)
           }
         },
-        {
-          root: null,
-          rootMargin: '0px',
-          threshold: 0.5,
-        }
+        { threshold: 0.5 }
       )
 
       observer.observe(element)
       observers.push(observer)
     })
 
-    return () => {
-      observers.forEach(observer => observer.disconnect())
-    }
-  }, [t])
+    return () => observers.forEach(o => o.disconnect())
+  }, [i18nextInstance.language])
 
   return (
     <>
@@ -73,19 +72,18 @@ export default function Topbar() {
         </NavbarBrand>
 
         <NavbarContent className="gap-6 hidden md:flex" justify="end">
-          {[t('topbar.first'), t('topbar.second'), t('topbar.third')].map((item, index) => (
-            <NavbarItem key={`${item}-${index}`}>
-              <Link
+          {SECTIONS.map(({ id, label }) => (
+            <NavbarItem key={id}>
+              <a
                 className={
-                  activeSection === item
+                  activeSection === id
                     ? 'uppercase text-foreground font-semibold text-lg'
                     : 'uppercase text-foreground font-semibold text-lg'
                 }
-                color="foreground"
-                href={'#' + item}
+                href={`#${id}`}
               >
-                {item}
-              </Link>
+                {t(label)}
+              </a>
             </NavbarItem>
           ))}
         </NavbarContent>
