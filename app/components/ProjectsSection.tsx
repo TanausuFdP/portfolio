@@ -56,12 +56,16 @@ export default function ProjectsSection() {
   useLayoutEffect(() => {
     if (!sectionRef.current) return
 
+    const HOLD = 0.3
+    const FLIP = 0.7
+    const FINAL_HOLD = 1
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
-          end: `+=${(PROJECTS.length - 1) * 100}%`,
+          end: `+=${PROJECTS.length * 200}%`,
           scrub: true,
         },
       })
@@ -79,8 +83,11 @@ export default function ProjectsSection() {
 
         if (!current || !next) return
 
+        tl.to({}, { duration: HOLD })
+
         tl.to(current, {
-          rotateX: -90,
+          rotateX: -180,
+          duration: FLIP,
           ease: 'none',
         })
 
@@ -88,24 +95,23 @@ export default function ProjectsSection() {
           next,
           {
             rotateX: 0,
+            duration: FLIP,
             ease: 'none',
-            onComplete: () => {
-              safeSetIndex(index + 1)
-            },
-            onReverseComplete: () => {
-              safeSetIndex(index)
-            },
+            onComplete: () => safeSetIndex(index + 1),
+            onReverseComplete: () => safeSetIndex(index),
           },
           '<'
         )
       })
+
+      tl.to({}, { duration: FINAL_HOLD })
     }, sectionRef)
 
     return () => ctx.revert()
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative" style={{ height: `${PROJECTS.length * 100}vh` }}>
+    <section ref={sectionRef} className="relative" style={{ height: `${PROJECTS.length * 200}vh` }}>
       <div className="sticky top-0 h-screen overflow-hidden">
         <ProjectsMarquee currentProject={t(PROJECTS[activeIndex].titleKey)} />
 
@@ -124,16 +130,12 @@ export default function ProjectsSection() {
               }}
               className="absolute inset-0 flex items-center justify-center"
               style={{
-                transform: index === 0 ? 'rotateX(0deg)' : 'rotateX(-90deg)',
-                transformOrigin: 'center bottom',
+                transform: index === 0 ? 'rotateX(0deg)' : 'rotateX(180deg)',
+                transformOrigin: 'center center',
+                backfaceVisibility: 'hidden',
               }}
             >
-              <ProjectCard
-                image={project.image}
-                subtitleKey={project.subtitleKey}
-                titleKey={project.titleKey}
-                url={project.url}
-              />
+              <ProjectCard {...project} />
             </div>
           ))}
         </div>

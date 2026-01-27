@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { t } from 'i18next'
@@ -12,8 +12,7 @@ export default function End() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const videoWrapperRef = useRef<HTMLDivElement>(null)
   const textRef = useRef<HTMLDivElement>(null)
-
-  const [showFooter, setShowFooter] = useState(false)
+  const footerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (!sectionRef.current || !videoWrapperRef.current || !textRef.current) return
@@ -61,20 +60,26 @@ export default function End() {
       )
     }, sectionRef)
 
+    gsap.fromTo(
+      footerRef.current,
+      {
+        y: 40,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'bottom-=20% bottom',
+          end: 'bottom bottom',
+          scrub: true,
+        },
+      }
+    )
+
     return () => ctx.revert()
-  }, [])
-
-  useEffect(() => {
-    const onScroll = () => {
-      const threshold = 10
-      const isBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight - threshold
-
-      setShowFooter(isBottom)
-    }
-
-    window.addEventListener('scroll', onScroll)
-
-    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   return (
@@ -124,12 +129,12 @@ export default function End() {
       </section>
 
       <footer
-        className={`
-          fixed bottom-8 left-1/2 -translate-x-1/2 z-50
-          flex flex-col items-center gap-4
-          transition-all duration-500 ease-out
-          ${showFooter ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}
-        `}
+        ref={footerRef}
+        className="
+    fixed bottom-8 left-1/2 -translate-x-1/2 z-50
+    flex flex-col items-center gap-4
+    pointer-events-auto
+  "
       >
         <div className="flex gap-6 uppercase font-bold text-lg">
           <a
