@@ -122,7 +122,7 @@ export default function CareerSection() {
     <section
       ref={sectionRef}
       className="relative"
-      id={t('topbar.fourth')}
+      id={'experience'}
       style={{ height: `${careers * 100}vh` }}
     >
       <div className="sticky top-0 h-screen overflow-hidden">

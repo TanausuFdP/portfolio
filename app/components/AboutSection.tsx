@@ -90,7 +90,7 @@ export default function AboutSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative px-8 pb-32 sm:px-20" id={t('topbar.about')}>
+    <section ref={sectionRef} className="relative px-8 pb-32 sm:px-20" id={'about'}>
       <div ref={introRef} className="pt-32 pb-24 text-center">
         <h2 className="text-lg font-bold uppercase mb-6">{t('about.title')}</h2>
 

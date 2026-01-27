@@ -111,7 +111,12 @@ export default function ProjectsSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative" style={{ height: `${PROJECTS.length * 200}vh` }}>
+    <section
+      ref={sectionRef}
+      className="relative"
+      id={'projects'}
+      style={{ height: `${PROJECTS.length * 200}vh` }}
+    >
       <div className="sticky top-0 h-screen overflow-hidden">
         <ProjectsMarquee currentProject={t(PROJECTS[activeIndex].titleKey)} />
 
