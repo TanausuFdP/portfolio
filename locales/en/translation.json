@@ -2,103 +2,137 @@
   "general": {
     "cv": "CV",
     "name": "TANA.",
+    "contact": "Contact me",
     "email": "tanausufdp@icloud.com",
-    "change_language": "Change language"
+    "change_language": "🇪🇸 Español"
   },
-  "career": {
-    "title_first": "My",
-    "title_second": "career",
-    "list": {
-      "1_title": "Bachelor's Degree in Computer Engineering",
-      "1_subtitle": "Universidad de Las Palmas de Gran Canaria | 2017 - 2021",
-      "2_title": "Game Developer",
-      "2_subtitle": "The Singular Factory | 2020 | Intern",
-      "3_title": "Frontend Developer",
-      "3_subtitle": "The Singular Factory | 2021 | Intern",
-      "4_title": "Full Stack Developer",
-      "4_subtitle": "Tiendas.com | 2021",
-      "5_title": "IT Technician",
-      "5_subtitle": "Cabildo de Gran Canaria | 2021 - 2022",
-      "6_title": "Full Stack Developer",
-      "6_subtitle": "Symbyosys IT Solutions | 2022 - 2025",
-      "7_title": "Full Stack Developer",
-      "7_subtitle": "Piicate | 2025 - Actualidad"
-    }
-  },
-  "entry": {
-    "button": "Contact me",
-    "first": "Feel free to explore my portfolio and see what I offer",
-    "second": "— I’d love to hear your thoughts!",
-    "networks": "My networks"
-  },
-  "now": {
-    "title_first": "What am I",
-    "title_second": "currently",
-    "title_third": "doing?",
-    "descriptions": {
-      "first": "Learning to program for iOS with Swift and Xcode",
-      "second": "Full web app built with Next.js",
-      "third": "Digital marketing for a personal trainer",
-      "fourth": "Mini-projects to showcase on my GitHub",
-      "fifth": "My own suspense novel"
-    }
-  },
-  "resume": {
-    "years_first": "4+",
-    "years_second": "Years of",
-    "years_third": "experience",
-    "projects_first": "6",
-    "projects_second": "Participated in",
-    "projects_third": "real-world projects",
-    "users_first": "∞",
-    "users_second": "Happy",
-    "users_third": "users",
-    "slogan": "«Make it simple or make it again.»"
-  },
-  "services": {
-    "title_first": "My",
-    "title_second": "services",
-    "paragraph": "«As a Full Stack Developer with a Computer Engineering degree from the University of Las Palmas de Gran Canaria, I enjoy building complete solutions — both server-side and client-side. Although I’m skilled across the stack, I’m especially passionate about Frontend development, where I can combine logic, design, and user experience.»",
-    "frontend": "Frontend Development",
-    "backend": "Backend Development",
-    "frontend_list": {
-      "1_name": "React",
-      "1_img": "react.png",
-      "2_name": "NodeJS",
-      "2_img": "NodeJS.png",
-      "3_name": "NextJS",
-      "3_img": "NextJS.jpeg",
-      "4_name": "Playwright",
-      "4_img": "Playwright.png",
-      "5_name": "Jest",
-      "5_img": "Jest.svg",
-      "6_name": "Vitest",
-      "6_img": "Vitest.jpg"
-    },
-    "backend_list": {
-      "1_name": "PHP",
-      "1_img": "PHP.jpg",
-      "2_name": "Java",
-      "2_img": "Java.png",
-      "3_name": "Sequelize",
-      "3_img": "Sequelize.png",
-      "4_name": "PostgreSQL",
-      "4_img": "PostgreSQL.png",
-      "5_name": "MySQL",
-      "5_img": "MySQL.avif",
-      "6_name": "MariaDB",
-      "6_img": "MariaDB.png"
-    }
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/tanausufdp",
+    "github": "https://github.com/tanausufdp",
+    "threads": "https://www.threads.net/@tanausu.js"
   },
   "topbar": {
     "first": "Projects",
-    "second": "About",
+    "second": "About me",
     "third": "Hire me"
   },
   "welcome": {
-    "first": "Hi! I'm",
-    "second": "Tanausú Fernández",
-    "third": "I'm a",
-    "download_button": "Download CV"
+    "first": "Tanausú Fernández",
+    "second": "I build end-to-end",
+    "third": "digital solutions",
+    "download_button": "Download CV",
+    "continue_hint": "Discover more below!"
+  },
+  "projects": {
+    "background_title": "My projects",
+    "view_project": "View project",
+    "items": {
+      "project1": {
+        "title": "Daisy",
+        "subtitle": "Daily SCRUM meetings manager."
+      },
+      "project2": {
+        "title": "Piicate",
+        "subtitle": "Gamified social network."
+      },
+      "project3": {
+        "title": "Trébol",
+        "subtitle": "Food delivery app with real-time courier management."
+      },
+      "project4": {
+        "title": "SGFactu NOW",
+        "subtitle": "Invoicing and business management with Veri*Factu."
+      },
+      "project5": {
+        "title": "SGTPV",
+        "subtitle": "Wholesale point-of-sale system."
+      },
+      "project6": {
+        "title": "FitRoomLP",
+        "subtitle": "Landing page for a local gym."
+      }
+    }
+  },
+  "about": {
+    "title": "About me",
+    "slogan": "Make it simple or make it again.",
+    "roles": {
+      "first": "Full-stack developer.",
+      "second": "Project manager.",
+      "third": "Software engineer.",
+      "fourth": "Videogames, films &",
+      "fifth": "music lover."
+    },
+    "description1": "My name is Tanausú Fernández. Born in the Canary Islands, raised near the coast — between ocean winds, beaches and long sunsets.",
+    "description2": "I build software with a strong focus on clarity, maintainability and people.",
+    "profile_alt": "Profile picture",
+    "contact": "Send me an email",
+    "chips": {
+      "clean_code": "Clean code",
+      "scalable_systems": "Scalable systems",
+      "product_minded": "Product-minded",
+      "problem_solver": "Problem solver",
+      "team_oriented": "Team-oriented",
+      "ux_aware": "UX-aware"
+    }
+  },
+  "resume": {
+    "years_second": "Years of",
+    "years_third": "experience",
+    "projects_second": "Involved in",
+    "projects_third": "real projects",
+    "users_second": "Satisfied",
+    "users_third": "users"
+  },
+  "background": {
+    "happy_clients_line1": "Happy clients,",
+    "happy_clients_line2": "happy me."
+  },
+  "career": {
+    "title_first": "My",
+    "title_second": "journey",
+    "list": {
+      "1_title": "Bachelor's Degree in Computer Engineering",
+      "1_subtitle": "University of Las Palmas de Gran Canaria",
+      "1_years": "2017 - 2021",
+      "2_title": "Game Developer",
+      "2_subtitle": "The Singular Factory | Internship",
+      "3_title": "Frontend Developer",
+      "3_subtitle": "The Singular Factory | Internship",
+      "4_title": "Senior IT Technician",
+      "4_subtitle": "Cabildo of Gran Canaria",
+      "4_years": "2021 - 2022",
+      "5_title": "Full Stack Developer",
+      "5_subtitle": "Tiendas.com",
+      "5_years": "2021",
+      "6_title": "Full Stack Developer",
+      "6_subtitle": "Symbyosys IT Solutions",
+      "6_years": "2022 - 2025",
+      "7_title": "Full Stack Developer & Project Manager",
+      "7_subtitle": "Piicate",
+      "7_years": "2025",
+      "8_title": "Full Stack Developer & Project Manager",
+      "8_subtitle": "SGMAS Software",
+      "8_years": "2025 - Present"
+    }
+  },
+  "where_to_find_me": {
+    "title": "Where to find me",
+    "description": "These are the places where I share my work, ideas and projects. Let’s connect!"
+  },
+  "end": {
+    "cta": {
+      "line1": "let’s build",
+      "line2": "something",
+      "line3": "meaningful"
+    },
+    "footer": {
+      "thanks": "Thanks for visiting!"
+    },
+    "links": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "threads": "Threads"
+    }
   }
 }

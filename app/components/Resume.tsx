@@ -12,9 +12,9 @@ export default function Resume() {
     <section className="relative py-32 overflow-hidden">
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <span className="text-[6rem] sm:text-[10rem] font-bold tracking-tight text-foreground opacity-[0.04] text-center leading-none">
-          Happy clients,
+          {t('background.happy_clients_line1')}
           <br />
-          happy me.
+          {t('background.happy_clients_line2')}
         </span>
       </div>
 

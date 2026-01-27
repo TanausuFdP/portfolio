@@ -128,7 +128,7 @@ export default function CareerSection() {
       <div className="sticky top-0 h-screen overflow-hidden">
         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none">
           <span className="text-sm tracking-[0.3em] font-semibold uppercase text-foreground opacity-[0.1]">
-            mi trayectoria
+            {t('career.title_first')} {t('career.title_second')}
           </span>
           <span
             ref={yearRef}

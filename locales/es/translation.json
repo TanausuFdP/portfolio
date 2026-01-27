@@ -54,26 +54,26 @@
     }
   },
   "about": {
-    "title": "About me",
-    "slogan": "Make it simple or make it again.",
+    "title": "Sobre mí",
+    "slogan": "Hazlo simple o vuelve a hacerlo.",
     "roles": {
-      "first": "Full-stack developer.",
+      "first": "Desarrollador full stack.",
       "second": "Project manager.",
-      "third": "Software engineer.",
-      "fourth": "Videogames, films &",
-      "fifth": "music lover."
+      "third": "Ingeniero de software.",
+      "fourth": "Amande de los videojuegos,",
+      "fifth": "del cine y de la música."
     },
-    "description1": "My name is Tanausú Fernández. Born in the Canary Islands, raised near the coast — between ocean winds, beaches and long sunsets.",
-    "description2": "I build software with a strong focus on clarity, maintainability and people.",
-    "profile_alt": "Profile picture",
-    "contact": "Send me an email",
+    "description1": "Me llamo Tanausú Fernández. Nacido en las Islas Canarias, criado cerca de la costa — entre vientos oceánicos, playas y largos atardeceres.",
+    "description2": "Construyo software con un fuerte enfoque en la claridad, la mantenibilidad y las personas.",
+    "profile_alt": "Foto de perfil",
+    "contact": "Envíame un correo",
     "chips": {
-      "clean_code": "Clean code",
-      "scalable_systems": "Scalable systems",
-      "product_minded": "Product-minded",
-      "problem_solver": "Problem solver",
-      "team_oriented": "Team-oriented",
-      "ux_aware": "UX-aware"
+      "clean_code": "Código limpio",
+      "scalable_systems": "Sistemas escalables",
+      "product_minded": "Mentalidad de producto",
+      "problem_solver": "Resolución de problemas",
+      "team_oriented": "Trabajo en equipo",
+      "ux_aware": "Sensibilidad UX"
     }
   },
   "resume": {
@@ -83,6 +83,10 @@
     "projects_third": "proyectos reales",
     "users_second": "Usuarios",
     "users_third": "satisfechos"
+  },
+  "background": {
+    "happy_clients_line1": "Clientes felices,",
+    "happy_clients_line2": "yo feliz."
   },
   "career": {
     "title_first": "Mi",
@@ -118,12 +122,12 @@
   },
   "end": {
     "cta": {
-      "line1": "let’s build",
-      "line2": "something",
-      "line3": "meaningful"
+      "line1": "construyamos",
+      "line2": "algo",
+      "line3": "con sentido"
     },
     "footer": {
-      "thanks": "Thanks for visiting!"
+      "thanks": "¡Gracias por visitar!"
     },
     "links": {
       "linkedin": "LinkedIn",
