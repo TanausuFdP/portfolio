@@ -98,11 +98,26 @@ export default function End() {
               ref={textRef}
               className="relative z-10 px-6 text-center text-white uppercase font-bold tracking-wide"
             >
-              <span className="block text-3xl sm:text-[4rem]">{t('end.cta.line1')}</span>
+              <span
+                className="block text-3xl sm:text-[4rem]"
+                style={{ textShadow: '0 5px 16px rgb(0,0,0)' }}
+              >
+                {t('end.cta.line1')}
+              </span>
               <Spacer y={6} />
-              <span className="block text-3xl sm:text-[4rem]">{t('end.cta.line2')}</span>
+              <span
+                className="block text-3xl sm:text-[4rem]"
+                style={{ textShadow: '0 5px 16px rgb(0,0,0)' }}
+              >
+                {t('end.cta.line2')}
+              </span>
               <Spacer y={6} />
-              <span className="block text-3xl sm:text-[4rem]">{t('end.cta.line3')}</span>
+              <span
+                className="block text-3xl sm:text-[4rem]"
+                style={{ textShadow: '0 5px 16px rgb(0,0,0)' }}
+              >
+                {t('end.cta.line3')}
+              </span>
             </div>
           </div>
         </div>

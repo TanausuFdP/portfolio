@@ -15,16 +15,18 @@ const PROJECTS = [
     titleKey: 'projects.items.project1.title',
     subtitleKey: 'projects.items.project1.subtitle',
     image: '/projects/project1.png',
+    url: 'https://github.com/TanausuFdP/daisy',
   },
   {
     titleKey: 'projects.items.project2.title',
     subtitleKey: 'projects.items.project2.subtitle',
     image: '/projects/project2.png',
+    url: 'https://github.com/TanausuFdP/piicate',
   },
   {
     titleKey: 'projects.items.project3.title',
     subtitleKey: 'projects.items.project3.subtitle',
-    image: '/projects/project3.png',
+    image: '/projects/project3.jpg',
   },
   {
     titleKey: 'projects.items.project4.title',
