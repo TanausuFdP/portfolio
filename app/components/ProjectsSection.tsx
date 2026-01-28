@@ -3,7 +3,7 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { t } from 'i18next'
+import { useTranslation } from 'react-i18next'
 
 import ProjectCard from './ProjectCard'
 import ProjectsMarquee from './ProjectsMarquee'
@@ -48,6 +48,8 @@ const PROJECTS = [
 
 export default function ProjectsSection() {
   const [activeIndex, setActiveIndex] = useState(0)
+
+  const { t } = useTranslation()
 
   const sectionRef = useRef<HTMLDivElement>(null)
   const cardsRef = useRef<HTMLDivElement[]>([])

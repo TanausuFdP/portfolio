@@ -3,12 +3,14 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { t } from 'i18next'
 import { Spacer } from '@heroui/react'
+import { useTranslation } from 'react-i18next'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function End() {
+  const { t } = useTranslation()
+
   const sectionRef = useRef<HTMLDivElement>(null)
   const videoWrapperRef = useRef<HTMLDivElement>(null)
   const textRef = useRef<HTMLDivElement>(null)

@@ -1,10 +1,12 @@
 'use client'
 
-import { t } from 'i18next'
+import { useTranslation } from 'react-i18next'
 
 import SocialCard from './SocialCard'
 
 export default function WhereToFindMe() {
+  const { t } = useTranslation()
+
   return (
     <section className="py-32 max-w-6xl mx-auto px-6">
       <div className="mb-20 text-center">
