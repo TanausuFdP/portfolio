@@ -90,11 +90,13 @@ export default function AboutSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative px-8 pb-32 sm:px-20" id={'about'}>
-      <div ref={introRef} className="pt-32 pb-24 text-center">
-        <h2 className="text-lg font-bold uppercase mb-6">{t('about.title')}</h2>
+    <section ref={sectionRef} className="relative px-6 sm:px-10 md:px-8 pb-24 md:pb-32" id="about">
+      <div ref={introRef} className="pt-24 md:pt-32 pb-16 md:pb-24 text-center">
+        <h2 className="text-base md:text-lg font-bold uppercase mb-4 md:mb-6">
+          {t('about.title')}
+        </h2>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col md:gap-2">
           {[
             t('about.roles.first'),
             t('about.roles.second'),
@@ -102,7 +104,15 @@ export default function AboutSection() {
             t('about.roles.fourth'),
             t('about.roles.fifth'),
           ].map(text => (
-            <h3 key={text} className="text-[4rem] sm:text-[5rem] uppercase font-bold leading-none">
+            <h3
+              key={text}
+              className="
+                text-[2.2rem] leading-tight
+                md:text-[4rem] md:leading-none
+                xl:text-[5rem]
+                uppercase font-bold
+              "
+            >
               {text}
             </h3>
           ))}
@@ -111,56 +121,60 @@ export default function AboutSection() {
 
       <div
         ref={imagesRef}
-        className="relative flex justify-center items-center bottom-20 pointer-events-none h-[360px]"
+        className="
+            relative flex items-center justify-center
+            bottom-36 md:bottom-20
+            h-[360px]
+            pointer-events-none
+            overflow-visible
+          "
       >
         <img
           alt="gran canaria landscape"
           className="
-      absolute
-      w-[280px]
-      rounded-2xl
-      shadow-xl
-      -rotate-6
-      -translate-x-64
-      translate-y-4
-      z-10
-    "
+              absolute
+              w-[150px] md:w-[280px]
+              rounded-2xl shadow-xl
+              -rotate-6
+              -translate-x-20 sm:-translate-x-24 md:-translate-x-64
+              translate-y-4
+              z-10
+            "
           src="/about/photo1.jpeg"
         />
 
         <img
           alt="profile"
           className="
-      absolute
-      w-[320px]
-      rounded-2xl
-      shadow-2xl
-      scale-105
-      z-20
-    "
+              absolute
+              w-[180px] md:w-[320px]
+              rounded-2xl shadow-2xl
+              overflow-hidden
+              bg-black
+              z-20
+            "
           src="/about/photo2.jpeg"
         />
 
         <img
           alt="gran canaria beach"
           className="
-      absolute
-      w-[280px]
-      rounded-2xl
-      shadow-xl
-      rotate-6
-      translate-x-64
-      translate-y-4
-      z-10
-    "
+              absolute
+              w-[150px] md:w-[280px]
+              rounded-2xl shadow-xl
+              rotate-6
+              translate-x-20 md:translate-x-64
+              translate-y-4
+              z-10
+            "
           src="/about/photo3.jpeg"
         />
       </div>
 
-      <Spacer y={20} />
+      <Spacer className="hidden md:block" y={20} />
 
       <div className="flex flex-col xl:flex-row gap-20 items-center mx-auto max-w-6xl">
-        <div ref={profileRef} className="relative min-w-[420px]">
+        <div ref={profileRef} className="hidden md:block relative min-w-[420px]">
           <div className="absolute -top-16 left-1/2 -translate-x-1/2 z-30">
             <div className="relative max-w-[260px] animate-float">
               <div className="rounded-3xl bg-background/90 backdrop-blur px-4 py-3  border border-foreground/10">
@@ -223,7 +237,7 @@ export default function AboutSection() {
             {t('about.description2')}
           </p>
 
-          <div ref={chipsRef} className="flex flex-wrap justify-center gap-3">
+          <div ref={chipsRef} className="flex flex-wrap justify-center xl:justify-start gap-3">
             {[
               'clean_code',
               'scalable_systems',
@@ -234,9 +248,11 @@ export default function AboutSection() {
             ].map(key => (
               <span
                 key={key}
-                className="px-4 py-2 text-sm uppercase tracking-wide
-                           rounded-full border border-foreground/20
-                           text-foreground/70"
+                className="
+                  px-4 py-2 text-sm uppercase tracking-wide
+                  rounded-full border border-foreground/20
+                  text-foreground/70
+                "
               >
                 {t(`about.chips.${key}`)}
               </span>
@@ -246,7 +262,7 @@ export default function AboutSection() {
           <div className="relative inline-flex">
             <span
               className="
-      absolute inset-0
+      hidden md:block absolute inset-0
       rounded-xl
       bg-[#38ABEC]
       opacity-20

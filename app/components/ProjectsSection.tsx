@@ -4,6 +4,7 @@ import { useLayoutEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useTranslation } from 'react-i18next'
+import { Spacer } from '@heroui/react'
 
 import ProjectCard from './ProjectCard'
 import ProjectsMarquee from './ProjectsMarquee'
@@ -47,9 +48,9 @@ const PROJECTS = [
 ]
 
 export default function ProjectsSection() {
-  const [activeIndex, setActiveIndex] = useState(0)
-
   const { t } = useTranslation()
+
+  const [activeIndex, setActiveIndex] = useState(0)
 
   const sectionRef = useRef<HTMLDivElement>(null)
   const cardsRef = useRef<HTMLDivElement[]>([])
@@ -58,95 +59,115 @@ export default function ProjectsSection() {
   useLayoutEffect(() => {
     if (!sectionRef.current) return
 
-    const HOLD = 0.3
-    const FLIP = 0.7
-    const FINAL_HOLD = 1
+    const mm = gsap.matchMedia()
 
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top top',
-          end: `+=${PROJECTS.length * 200}%`,
-          scrub: true,
-        },
-      })
+    mm.add('(min-width: 768px)', () => {
+      const HOLD = 0.3
+      const FLIP = 0.7
+      const FINAL_HOLD = 1
 
-      const safeSetIndex = (index: number) => {
-        if (lastIndex.current !== index) {
-          lastIndex.current = index
-          setActiveIndex(index)
-        }
-      }
-
-      PROJECTS.forEach((_, index) => {
-        const current = cardsRef.current[index]
-        const next = cardsRef.current[index + 1]
-
-        if (!current || !next) return
-
-        tl.to({}, { duration: HOLD })
-
-        tl.to(current, {
-          rotateX: -180,
-          duration: FLIP,
-          ease: 'none',
+      const ctx = gsap.context(() => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top top',
+            end: `+=${PROJECTS.length * 200}%`,
+            scrub: true,
+          },
         })
 
-        tl.to(
-          next,
-          {
-            rotateX: 0,
+        const safeSetIndex = (index: number) => {
+          if (lastIndex.current !== index) {
+            lastIndex.current = index
+            setActiveIndex(index)
+          }
+        }
+
+        PROJECTS.forEach((_, index) => {
+          const current = cardsRef.current[index]
+          const next = cardsRef.current[index + 1]
+
+          if (!current || !next) return
+
+          tl.to({}, { duration: HOLD })
+
+          tl.to(current, {
+            rotateX: -180,
             duration: FLIP,
             ease: 'none',
-            onComplete: () => safeSetIndex(index + 1),
-            onReverseComplete: () => safeSetIndex(index),
-          },
-          '<'
-        )
-      })
+          })
 
-      tl.to({}, { duration: FINAL_HOLD })
-    }, sectionRef)
+          tl.to(
+            next,
+            {
+              rotateX: 0,
+              duration: FLIP,
+              ease: 'none',
+              onComplete: () => safeSetIndex(index + 1),
+              onReverseComplete: () => safeSetIndex(index),
+            },
+            '<'
+          )
+        })
 
-    return () => ctx.revert()
+        tl.to({}, { duration: FINAL_HOLD })
+      }, sectionRef)
+
+      return () => ctx.revert()
+    })
+
+    return () => mm.revert()
   }, [])
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative"
-      id={'projects'}
-      style={{ height: `${PROJECTS.length * 200}vh` }}
-    >
-      <div className="sticky top-0 h-screen overflow-hidden">
-        <ProjectsMarquee currentProject={t(PROJECTS[activeIndex].titleKey)} />
+    <>
+      <section
+        ref={sectionRef}
+        className="relative hidden md:block"
+        id="projects"
+        style={{ height: `${PROJECTS.length * 200}vh` }}
+      >
+        <div className="sticky top-0 h-screen overflow-hidden">
+          <ProjectsMarquee currentProject={t(PROJECTS[activeIndex].titleKey)} />
 
-        <div
-          className="relative h-full w-full"
-          style={{
-            perspective: '1200px',
-            transformStyle: 'preserve-3d',
-          }}
-        >
-          {PROJECTS.map((project, index) => (
-            <div
-              key={project.titleKey}
-              ref={el => {
-                if (el) cardsRef.current[index] = el
-              }}
-              className="absolute inset-0 flex items-center justify-center"
-              style={{
-                transform: index === 0 ? 'rotateX(0deg)' : 'rotateX(180deg)',
-                transformOrigin: 'center center',
-                backfaceVisibility: 'hidden',
-              }}
-            >
-              <ProjectCard {...project} />
-            </div>
+          <div
+            className="relative h-full w-full"
+            style={{
+              perspective: '1200px',
+              transformStyle: 'preserve-3d',
+            }}
+          >
+            {PROJECTS.map((project, index) => (
+              <div
+                key={project.titleKey}
+                ref={el => {
+                  if (el) cardsRef.current[index] = el
+                }}
+                className="absolute inset-0 flex items-center justify-center"
+                style={{
+                  transform: index === 0 ? 'rotateX(0deg)' : 'rotateX(180deg)',
+                  transformOrigin: 'center center',
+                  backfaceVisibility: 'hidden',
+                }}
+              >
+                <ProjectCard {...project} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="md:hidden px-4 py-16" id="projects">
+        <h3 className="uppercase text-center font-semibold text-2xl">
+          {t('projects.background_title')}
+        </h3>
+        <Spacer y={4} />
+        <div className="w-full flex flex-col items-center gap-8">
+          {PROJECTS.map(project => (
+            <ProjectCard key={project.titleKey} {...project} />
           ))}
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }

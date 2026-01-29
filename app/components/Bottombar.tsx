@@ -26,7 +26,7 @@ export default function Bottombar() {
   return (
     <div
       className={`
-        fixed right-6 sm:right-10 z-20
+        hidden md:block fixed right-6 sm:right-10 z-20
         transition-all duration-500 ease-out
         ${isScrolled ? 'bottom-6' : 'bottom-6'}
       `}

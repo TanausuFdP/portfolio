@@ -1,21 +1,11 @@
 'use client'
 
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  NavbarMenu,
-  NavbarMenuItem,
-  NavbarMenuToggle,
-} from '@heroui/navbar'
-import { Button } from '@heroui/react'
-import { Link } from '@heroui/link'
-import { ArrowDownCircleIcon } from '@heroicons/react/24/outline'
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle } from '@heroui/navbar'
 import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from 'react'
-
-import LanguageSwitcher from './LanguageSwitcher'
+import { Button } from '@heroui/button'
+import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from '@heroui/react'
+import { IconMenu } from '@tabler/icons-react'
 
 const SECTIONS = [
   { id: 'projects', label: 'topbar.first' },
@@ -89,58 +79,43 @@ export default function Topbar() {
         </NavbarContent>
       </Navbar>
 
-      <Navbar isBordered className="md:hidden">
-        <NavbarContent className="md:hidden" justify="start">
-          <NavbarMenuToggle />
-        </NavbarContent>
+      <div
+        className="
+        md:hidden
+        fixed top-0 left-0 right-0
+        z-50
+        flex items-center justify-between
+        px-4
+        h-14
+        bg-transparent
+      "
+      >
+        <div className="flex items-center">
+          <p className="font-bold text-lg">{t('general.name')}</p>
+        </div>
 
-        <NavbarContent className="md:hidden pr-3" justify="center">
-          <NavbarBrand>
-            <p className="font-bold text-inherit text-lg">{t('general.name')}</p>
-          </NavbarBrand>
-        </NavbarContent>
+        <div className="flex items-center">
+          <Dropdown className="font-poppins" placement="bottom-start">
+            <DropdownTrigger>
+              <Button disableAnimation isIconOnly aria-label="Menu" variant="light">
+                <IconMenu />
+              </Button>
+            </DropdownTrigger>
 
-        <NavbarContent className="gap-1" justify="end">
-          <NavbarItem>
-            <Button
-              className="text-md gap-1"
-              color="primary"
-              radius="full"
-              size="sm"
-              startContent={<ArrowDownCircleIcon className="w-5 h-5 stroke-2" />}
-              variant="shadow"
-              onPress={() =>
-                window.open('/cv/CV-' + i18nextInstance.language + '_v5.pdf', '_blank')
-              }
-            >
-              {t('general.cv')}
-            </Button>
-          </NavbarItem>
-        </NavbarContent>
-
-        <NavbarMenu className="gap-8 font-poppins">
-          {[t('topbar.first'), t('topbar.second'), t('topbar.third'), t('topbar.fourth')].map(
-            (item, index) => (
-              <NavbarMenuItem key={`${item}-${index}`}>
-                <Link
-                  className={
-                    activeSection === item
-                      ? 'text-primary font-semibold underline underline-offset-[6px] text-lg'
-                      : 'text-foreground font-[500] text-lg'
-                  }
-                  color="foreground"
-                  href={'#' + item}
+            <DropdownMenu aria-label="Mobile navigation">
+              {SECTIONS.map(({ id, label }) => (
+                <DropdownItem
+                  key={id}
+                  className="text-center uppercase font-semibold"
+                  href={`#${id}`}
                 >
-                  {item}
-                </Link>
-              </NavbarMenuItem>
-            )
-          )}
-          <NavbarMenuItem className="font-500 absolute bottom-10 left-0 w-full px-5">
-            <LanguageSwitcher />
-          </NavbarMenuItem>
-        </NavbarMenu>
-      </Navbar>
+                  {t(label)}
+                </DropdownItem>
+              ))}
+            </DropdownMenu>
+          </Dropdown>
+        </div>
+      </div>
     </>
   )
 }
