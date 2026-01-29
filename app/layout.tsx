@@ -32,8 +32,8 @@ const quicksand = Quicksand({
 })
 
 export const metadata: Metadata = {
-  title: 'Tanausú | Portfolio',
-  description: 'Full Stack Developer',
+  title: 'Tana | Full Stack Developer & Project Manager',
+  description: 'I build scalable web applications and manage projects efficiently.',
 }
 
 export default function RootLayout({
