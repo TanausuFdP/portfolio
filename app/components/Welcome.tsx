@@ -154,7 +154,7 @@ export default function Welcome() {
             text-md
             px-4
           "
-        radius="sm"
+        radius="full"
         variant="bordered"
         onPress={toggleLanguage}
       >

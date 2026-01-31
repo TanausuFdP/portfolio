@@ -22,20 +22,20 @@ export default function Home() {
       <Welcome />
       <div className="min-h-screen">
         <ProjectsSection />
-        <Spacer className="hidden sm:block" y={12} />
-        <Spacer className="sm:hidden" y={4} />
+        <Spacer className="hidden md:block" y={12} />
+        <Spacer className="md:hidden" y={4} />
         <AboutSection />
-        <Spacer className="hidden sm:block" y={24} />
-        <Spacer className="sm:hidden" y={12} />
+        <Spacer className="hidden md:block" y={24} />
+        <Spacer className="hidden sm:block md:hidden" y={12} />
         <Resume />
-        <Spacer className="hidden sm:block" y={24} />
-        <Spacer className="sm:hidden" y={12} />
+        <Spacer className="hidden md:block" y={24} />
+        <Spacer className="md:hidden" y={12} />
         <Career />
-        <Spacer className="hidden sm:block" y={24} />
-        <Spacer className="sm:hidden" y={12} />
+        <Spacer className="hidden md:block" y={24} />
+        <Spacer className="md:hidden" y={12} />
         <WhereToFindMe />
-        <Spacer className="hidden sm:block" y={64} />
-        <Spacer className="sm:hidden" y={40} />
+        <Spacer className="hidden md:block" y={64} />
+        <Spacer className="md:hidden" y={40} />
         <End />
       </div>
       <Bottombar />

@@ -123,7 +123,7 @@ export default function AboutSection() {
         ref={imagesRef}
         className="
             relative flex items-center justify-center
-            bottom-36 md:bottom-20
+            bottom-32 md:bottom-20
             h-[360px]
             pointer-events-none
             overflow-visible
@@ -229,11 +229,11 @@ export default function AboutSection() {
         </div>
 
         <div className="flex flex-col gap-10 text-center xl:text-left">
-          <p className="text-lg sm:text-xl leading-relaxed text-foreground/80">
+          <p className="text-md sm:text-lg md:text-xl leading-relaxed text-foreground/80">
             {t('about.description1')}
           </p>
 
-          <p className="text-lg sm:text-xl leading-relaxed text-foreground/80">
+          <p className="text-md sm:text-lg md:text-xl leading-relaxed text-foreground/80">
             {t('about.description2')}
           </p>
 
@@ -249,9 +249,10 @@ export default function AboutSection() {
               <span
                 key={key}
                 className="
-                  px-4 py-2 text-sm uppercase tracking-wide
+                  px-4 py-2 uppercase tracking-wide
                   rounded-full border border-foreground/20
                   text-foreground/70
+                  text-xs sm:text-sm
                 "
               >
                 {t(`about.chips.${key}`)}
@@ -260,7 +261,7 @@ export default function AboutSection() {
           </div>
 
           <div className="relative inline-flex">
-            <span
+            {/* <span
               className="
       hidden md:block absolute inset-0
       rounded-xl
@@ -271,7 +272,7 @@ export default function AboutSection() {
       mx-auto max-w-[70%]
       scale-90
     "
-            />
+            /> */}
 
             <Button
               className="
