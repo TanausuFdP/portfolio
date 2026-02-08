@@ -133,10 +133,10 @@ export default function AboutSection() {
           alt="gran canaria landscape"
           className="
               absolute
-              w-[150px] md:w-[280px]
+              w-[150px] md:w-[200px] lg:w-[280px]
               rounded-2xl shadow-xl
               -rotate-6
-              -translate-x-20 sm:-translate-x-24 md:-translate-x-64
+              -translate-x-20 sm:-translate-x-24  md:-translate-x-36 lg:-translate-x-64
               translate-y-4
               z-10
             "
@@ -147,7 +147,7 @@ export default function AboutSection() {
           alt="profile"
           className="
               absolute
-              w-[180px] md:w-[320px]
+              w-[180px] md:w-[240px] lg:w-[320px]
               rounded-2xl shadow-2xl
               overflow-hidden
               bg-black
@@ -160,10 +160,10 @@ export default function AboutSection() {
           alt="gran canaria beach"
           className="
               absolute
-              w-[150px] md:w-[280px]
+              w-[150px] md:w-[200px] lg:w-[280px]
               rounded-2xl shadow-xl
               rotate-6
-              translate-x-20 md:translate-x-64
+              translate-x-20 md:translate-x-36 lg:translate-x-64
               translate-y-4
               z-10
             "
